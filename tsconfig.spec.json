@@ -1,10 +1,12 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "composite": true,
+    "declaration": true,
     "outDir": "./out-tsc/spec",
     "target": "es2022",
-    "types": ["node", "vitest/globals"]
+    "types": ["node", "vitest/globals"],
+    "typeRoots": ["./node_modules/@types", "./node_modules"]
   },
   "files": ["src/test-setup.ts"],
   "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]

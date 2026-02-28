@@ -79,3 +79,16 @@ button:focus-visible {
 .analog-markdown p {
   text-align: left;
 }
+
+.hd-report {
+  font-family: Arial;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.diagram svg {
+  width: 100%;
+}

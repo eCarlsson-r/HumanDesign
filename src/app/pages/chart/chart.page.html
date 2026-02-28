@@ -1,0 +1,17 @@
+<div class="chart-page">
+
+  <hd-birth-form (submitted)="generate($event)"></hd-birth-form>
+
+  <div *ngIf="loading$ | async">Calculating...</div>
+
+  <div class="workspace" *ngIf="report$ | async as report">
+
+    <!-- Bodygraph -->
+    <hd-bodygraph [report]="report.diagramData"></hd-bodygraph>
+
+    <!-- Data Panel -->
+    <hd-chart-panel [report]="report"></hd-chart-panel>
+
+  </div>
+
+</div>

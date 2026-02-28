@@ -1,0 +1,17 @@
+<div class="panel" *ngIf="report">
+
+  <h3>Design Summary</h3>
+
+  <p><b>Type:</b> {{ report.type }}</p>
+  <p><b>Strategy:</b> {{ report.strategy }}</p>
+  <p><b>Authority:</b> {{ report.authority }}</p>
+  <p><b>Profile:</b> {{ report.profile }}</p>
+
+  <h4>Defined Centers</h4>
+  <ul>
+    <li *ngFor="let c of report.centerDefinitions">
+      {{ c }}
+    </li>
+  </ul>
+
+</div>

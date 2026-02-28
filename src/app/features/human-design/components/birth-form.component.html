@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="form">
+
+  <input placeholder="Name" formControlName="FullName" />
+
+  <input type="date" formControlName="BirthDate" />
+
+  <input type="time" formControlName="BirthTime" />
+
+  <input placeholder="Birth Location" formControlName="BirthLocation" />
+
+  <button type="submit">Generate Chart</button>
+
+</form>
