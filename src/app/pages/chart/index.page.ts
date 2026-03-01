@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'hd-chart-page',
-  templateUrl: './chart.page.html',
+  templateUrl: './chart.page.component.html',
   imports: [BirthFormComponent, BodygraphComponent, ChartPanelComponent, CommonModule],
   standalone: true,
   styles: [

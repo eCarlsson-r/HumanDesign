@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 export class DiagramEngineService {
 
   render(svg: SVGSVGElement, chart: any) {
-    this.renderCenters(svg, chart.centerDefinitions);
-    this.renderGates(svg, chart.activations);
+    this.renderCenters(svg, chart.centers);
+    this.renderGates(svg, chart.gates);
     this.renderArrows(svg, chart.variables);
   }
 
@@ -13,10 +13,10 @@ export class DiagramEngineService {
 
   private renderCenters(svg: SVGSVGElement, centers: any[]) {
     centers.forEach(c => {
-      const el = svg.getElementById(`center-${c.centerName}`);
+      const el = svg.getElementById(`center-${c.name}`);
       if (!el) return;
       let filledColor = '#ffffff';
-      switch(c.centerName) {
+      switch(c.name) {
         case "Head": filledColor = "#8A02B0"; break;
         case "Ajna": filledColor = "#064AFB"; break;
         case "Throat": filledColor = "#03D5F2"; break;
@@ -27,66 +27,71 @@ export class DiagramEngineService {
         case "Spleen": filledColor = "#79DC04"; break;
         case "Root": filledColor = "#954D02"; break;
       }
-
-      el.setAttribute('fill', c.definition === "defined" ? filledColor : '#ffffff');
+      el.setAttribute('fill', c.isDefined ? filledColor : '#ffffff');
     });
   }
 
   // ---------- GATES ----------
 
   private renderGates(svg: SVGSVGElement, gates: any[]) {
+    console.info(gates);
     const seen = new Set();
     // Filter for items whose property value has already been added to the Set
     const duplicates = gates.filter(item => {
-      const value = item["gate"];
+      const value = parseInt(item.key.replace("Gate", ""));
+      console.info(value, seen.has(value));
       if (seen.has(value)) return true;
       seen.add(value);
       return false;
     });
+    console.info(seen);
+    console.info(duplicates);
 
     gates.forEach(g => {
+      const gateId = parseInt(g.key.replace("Gate", ""));
       if (duplicates.includes(g)) {
-        const design = svg.getElementById(`design-${g.gate}`);
+        const design = svg.getElementById(`design-${gateId}`);
+        console.info(design);
         if (!design) return;
 
         design.setAttribute('fill', '#d9534f');
 
-        const el = svg.getElementById(`personality-${g.gate}`);
+        const el = svg.getElementById(`personality-${gateId}`);
         if (!el) return;
 
         el.setAttribute('fill', '#495057');
       } else {
         if (g.type === "Design") {
-          const design = svg.getElementById(`design-${g.gate}`);
+          const design = svg.getElementById(`design-${gateId}`);
           if (!design) return;
 
           design.setAttribute('fill', '#d9534f');
 
-          const el = svg.getElementById(`personality-${g.gate}`);
+          const el = svg.getElementById(`personality-${gateId}`);
           if (!el) return;
 
           el.setAttribute('fill', '#d9534f');
         }
 
         if (g.type === "Personality") {
-          const design = svg.getElementById(`design-${g.gate}`);
+          const design = svg.getElementById(`design-${gateId}`);
           if (!design) return;
 
           design.setAttribute('fill', '#495057');
 
-          const el = svg.getElementById(`personality-${g.gate}`);
+          const el = svg.getElementById(`personality-${gateId}`);
           if (!el) return;
 
           el.setAttribute('fill', '#495057');
         }
       }
 
-      const el = svg.getElementById(`fill-${g.gate}`);
+      const el = svg.getElementById(`fill-${gateId}`);
       if (!el) return;
 
       el.setAttribute('fill', '#000');
 
-      const text = svg.getElementById(`${g.gate}`);
+      const text = svg.getElementById(`${gateId}`);
       if (!text) return;
 
       text.setAttribute('fill', '#FFF');

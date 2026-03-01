@@ -1,0 +1,34 @@
+.level-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.active {
+  background: #333;
+  color: white;
+}
+
+.card {
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.defined {
+  color: green;
+  font-weight: bold;
+}
+
+.loading {
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+}

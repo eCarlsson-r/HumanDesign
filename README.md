@@ -1,26 +1,68 @@
-# human-design-frontend
+# ✨ Human Design Portal
 
-This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
+![Human Design Hero](./assets/hero.png)
 
-## Setup
+[![Angular](https://img.shields.io/badge/Angular-21.0-DD0031?logo=angular)](https://angular.io/)
+[![AnalogJS](https://img.shields.io/badge/AnalogJS-2.3.0-blue?logo=analog)](https://analogjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?logo=vite)](https://vitejs.dev/)
 
-Run `npm install` to install the application dependencies.
+A premium, high-performance web application for exploring and generating Human Design charts. Built with the **latest Angular 21** and **AnalogJS**, this portal offers a seamless, reactive experience for discovering your inner design.
 
-## Development
+## 🌟 Features
 
-Run `npm start` for a dev server. Navigate to `http://localhost:5173/`. The application automatically reloads if you change any of the source files.
+- **Interactive Bodygraphs**: Beautiful, responsive SVG charts that visualize your unique Human Design centers, channels, and gates.
+- **PDF Report Exports**: Generate and download professional-grade PDF reports of your Human Design analysis with a single click.
+- **SSR Performance**: Powered by **AnalogJS** for lightning-fast server-side rendering and SEO optimization.
+- **Modern Aesthetics**: Built with **Tailwind CSS v4**, featuring a sleek dark-mode UI, glassmorphism, and smooth micro-animations.
+- **Deep Insights**: Real-time integration with the Human Design Engine backend for precise astrological data.
 
-## Build
+---
 
-Run `npm run build` to build the client/server project. The client build artifacts are located in the `dist/analog/public` directory. The server for the API build artifacts are located in the `dist/analog/server` directory.
+## 🛠️ Tech Stack
 
-## Test
+- **Framework**: [AnalogJS](https://analogjs.org) (Angular Meta-framework)
+- **Styling**: Tailwind CSS v4
+- **Visualization**: Interactive SVG Engine
+- **Export**: `jspdf` & `html2canvas` for high-fidelity report generation
+- **Build Tool**: Vite
+- **Testing**: Vitest
 
-Run `npm run test` to run unit tests with [Vitest](https://vitest.dev).
+---
 
-## Community
+## 🚀 Getting Started
 
-- Visit and Star the [GitHub Repo](https://github.com/analogjs/analog)
-- Join the [Discord](https://chat.analogjs.org)
-- Follow us on [Twitter](https://twitter.com/analogjs)
-- Become a [Sponsor](https://github.com/sponsors/brandonroberts)
+### Prerequisites
+
+- Node.js >= 20.19.1
+- npm
+
+### Installation
+
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open `http://localhost:5173/` in your browser.
+
+---
+
+## 📁 Project Structure
+
+- `src/app/pages`: File-based routing powered by AnalogJS.
+- `src/app/components`: Reusable UI components (Bodygraph, Charts, Reports).
+- `public/assets`: Static resources and SVG templates.
+- `styles.css`: Tailwind v4 configuration and global styles.
+
+---
+
+<p align="center">
+  <img src="./assets/logo.png" width="100" height="100" alt="Logo">
+  <br>
+  Designed for self-awareness. Engineered for performance.
+</p>

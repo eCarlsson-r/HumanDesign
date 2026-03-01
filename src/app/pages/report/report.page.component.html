@@ -1,0 +1,75 @@
+<div id="reportContent">
+  <div class="level-tabs">
+    <button (click)="setLevel('Preview')" [class.active]="level==='Preview'">
+      Preview
+    </button>
+
+    <button (click)="setLevel('Summary')" [class.active]="level==='Summary'">
+      Summary
+    </button>
+
+    <button (click)="setLevel('Detail')" [class.active]="level==='Detail'">
+      Detail
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    Loading report...
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <hd-bodygraph *ngIf="!loading" [report]="report"></hd-bodygraph>
+
+  <section *ngIf="report">
+
+    <h1>{{ report.type?.name }}</h1>
+
+    <div class="basic">
+      <p><b>Strategy:</b> {{ report.strategy?.name }}</p>
+      <p><b>Authority:</b> {{ report.authority }}</p>
+      <p><b>Profile:</b> {{ report.profile?.name }}</p>
+    </div>
+
+    <div *ngIf="level !== 'Preview'">
+
+      <h2>Definition</h2>
+      <p>{{ report.definition }}</p>
+
+      <h2>Incarnation Cross</h2>
+      <p>{{ report.cross?.description }}</p>
+
+      <h2>Centers</h2>
+      <ul>
+        <li *ngFor="let c of report.centers">
+          {{ c.name }} —
+          <span [class.defined]="c.isDefined">
+            {{ c.isDefined ? 'Defined' : 'Open' }}
+          </span>
+        </li>
+      </ul>
+
+    </div>
+
+    <div *ngIf="level === 'Detail'">
+
+      <h2>Channels</h2>
+      <div *ngFor="let ch of report.channels" class="card">
+        <h3>{{ ch.name }}</h3>
+        <p>{{ ch.description }}</p>
+      </div>
+
+      <h2>Gates</h2>
+      <div *ngFor="let g of report.gates" class="card">
+        <h3>{{ g.name }}</h3>
+        <p>{{ g.description }}</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <button (click)="exportPdf()">Download PDF</button>
+</div>

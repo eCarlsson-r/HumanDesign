@@ -1,49 +1,78 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { ProspectApiService } from '../../core/api/prospect-api.service';
+import { CommonModule } from '@angular/common';
+import { PdfExportService } from '../../features/human-design/services/pdf-export.service';
+import { ReportApiService, HumanDesignReport } from '../../core/api/report-api.service';
 import { BodygraphComponent } from '../../features/human-design/components/bodygraph-component';
-import { ReportHeaderComponent } from '../../features/human-design/components/report/report-header.component';
-import { ReportSummaryComponent } from '../../features/human-design/components/report/report-summary.component';
-import { ReportCentersComponent } from '../../features/human-design/components/report/report-centers.component';
-import { ReportChannelsComponent } from '../../features/human-design/components/report/report-channels.component';
+
+type ReportLevel = 'Preview' | 'Summary' | 'Detail';
 
 @Component({
-  selector: 'hd-report-page',
-  templateUrl: './report.page.html',
-  imports: [CommonModule, ReportHeaderComponent, ReportSummaryComponent, BodygraphComponent, ReportCentersComponent, ReportChannelsComponent],
+  selector: 'app-report-page',
+  imports: [CommonModule, BodygraphComponent],
   standalone: true,
-  styles: [`
-    .report-container {
-      background: #f5f5f5;
-      padding: 40px;
-    }
-
-    .report-page {
-      width: 210mm;
-      min-height: 297mm;
-      background: white;
-      margin: 20px auto;
-      padding: 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      page-break-after: always;
-    }
-  `]
+  templateUrl: './report.page.component.html',
+  styleUrls: ['./report.page.component.scss']
 })
-export default class ReportPage implements OnInit {
+export default class ReportPageComponent implements OnInit {
 
-  report: any;
+  designId!: string;
+  report?: HumanDesignReport;
+
+  level: ReportLevel = 'Preview';
+
+  loading = false;
+  error?: string;
 
   constructor(
     private route: ActivatedRoute,
-    private api: ProspectApiService
+    private pdf: PdfExportService,
+    private api: ReportApiService
   ) {}
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.api.getReport(id).subscribe(r => this.report = r);
-    }
+  ngOnInit(): void {
+    this.designId = this.route.snapshot.paramMap.get('id')!;
+    this.loadReport();
   }
 
+  setLevel(level: ReportLevel) {
+    if (this.level === level) return;
+    this.level = level;
+    this.loadReport();
+  }
+
+  private loadReport() {
+    this.loading = true;
+    this.error = undefined;
+
+    let request$;
+
+    switch (this.level) {
+      case 'Preview':
+        request$ = this.api.getPreview(this.designId);
+        break;
+      case 'Summary':
+        request$ = this.api.getSummary(this.designId);
+        break;
+      case 'Detail':
+        request$ = this.api.getDetail(this.designId);
+        break;
+    }
+
+    request$!.subscribe({
+      next: r => {
+        this.report = r;
+        this.loading = false;
+      },
+      error: err => {
+        this.error = 'Failed to load report';
+        this.loading = false;
+      }
+    });
+  }
+
+  exportPdf() {
+    const name = `HumanDesign_${this.designId}_${this.level}.pdf`;
+    this.pdf.export('reportContent', name);
+  }
 }
