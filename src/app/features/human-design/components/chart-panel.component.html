@@ -1,16 +1,13 @@
-<div class="panel" *ngIf="report">
+<div class="space-y-4 text-lg">
+  <p><b>Type:</b> {{ report.type.title }}</p>
+  <p><b>Strategy:</b> {{ report.strategy.title }}</p>
+  <p><b>Authority:</b> {{ report.authority.title }}</p>
+  <p><b>Profile:</b> {{ report.profile.title }}</p>
 
-  <h3>Design Summary</h3>
-
-  <p><b>Type:</b> {{ report.type }}</p>
-  <p><b>Strategy:</b> {{ report.strategy }}</p>
-  <p><b>Authority:</b> {{ report.authority }}</p>
-  <p><b>Profile:</b> {{ report.profile }}</p>
-
-  <h4>Defined Centers</h4>
+  <h4 className="text-xl font-semibold">Defined Centers</h4>
   <ul>
-    <li *ngFor="let c of report.centerDefinitions">
-      {{ c }}
+    <li *ngFor="let c of report.centers">
+      {{ (c.isDefined) ? "Defined" : "Open" }} {{ c.name }}
     </li>
   </ul>
 

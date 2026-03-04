@@ -5,7 +5,7 @@ import { DiagramEngineService } from '../engine/diagram-engine.service';
   selector: 'hd-bodygraph',
   standalone: true,
   template: `
-    <object #svgObj data="/assets/bodygraph.svg" type="image/svg+xml"></object>
+    <object class="w-full h-full" #svgObj data="/assets/bodygraph.svg" type="image/svg+xml"></object>
   `
 })
 export class BodygraphComponent implements AfterViewInit {

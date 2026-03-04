@@ -1,0 +1,65 @@
+<div *ngIf="!redirecting">
+  <section class="bg-linear-to-br from-emerald-600 to-teal-700 text-white text-center py-24">
+    <h1 class="text-4xl md:text-6xl font-bold">
+      Discover Your Human Design Blueprint
+    </h1>
+    <p class="mt-6 text-lg text-emerald-100">
+      Generate your Human Design preview instantly.
+    </p>
+  </section>
+
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-10">
+      <h2 class="text-2xl font-bold mb-8 text-center">
+        Generate Your Preview
+      </h2>
+
+      <hd-birth-form [loading]="loading" (submitted)="generate($event)"></hd-birth-form>
+    </div>
+  </section>
+
+  <section *ngIf="previewReport" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <div class="bg-gray-50 rounded-2xl shadow-lg p-10">
+
+        <h2 class="text-3xl font-bold mb-6 text-center">
+          Your Preview Result
+        </h2>
+
+        <div class="grid grid-cols-2 space-y-4 text-lg">
+          <div class="w-full h-auto">
+            <!-- Bodygraph -->
+            <hd-bodygraph [report]="previewReport"></hd-bodygraph>
+          </div>
+
+          <!-- Data Panel -->
+          <div class="w-full h-auto">
+            <hd-chart-panel [report]="previewReport"></hd-chart-panel>
+          </div>
+        </div>
+
+        <!-- LOCKED SECTION -->
+        <div class="mt-10 relative">
+          <div class="absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center rounded-xl">
+            <div class="text-center">
+              <p class="text-xl font-semibold mb-4">
+                Unlock Full Summary Report
+              </p>
+              <button
+                (click)="unlockSummary()"
+                class="bg-emerald-600 text-white px-6 py-3 rounded-xl hover:bg-emerald-700"
+              >
+                Unlock Now
+              </button>
+            </div>
+          </div>
+
+          <div class="p-6 border rounded-xl text-gray-500">
+            Detailed interpretation content is locked.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

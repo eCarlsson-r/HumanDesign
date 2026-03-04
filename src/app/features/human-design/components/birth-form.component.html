@@ -1,13 +1,17 @@
-<form [formGroup]="form" (ngSubmit)="submit()" class="form">
+<form [formGroup]="form" (ngSubmit)="submit()" class="grid gap-6">
+  <input placeholder="Full Name" formControlName="FullName" class="border p-3 rounded-lg w-full" />
 
-  <input placeholder="Name" formControlName="FullName" />
+  <input type="email" placeholder="Email Address" formControlName="Email" class="border p-3 rounded-lg w-full" />
 
-  <input type="date" formControlName="BirthDate" />
+  <input type="tel" placeholder="Phone Number" formControlName="Phone" class="border p-3 rounded-lg w-full" />
 
-  <input type="time" formControlName="BirthTime" />
+  <input type="date" formControlName="BirthDate" class="border p-3 rounded-lg w-full" />
 
-  <input placeholder="Birth Location" formControlName="BirthLocation" />
+  <input type="time" formControlName="BirthTime" class="border p-3 rounded-lg w-full" />
 
-  <button type="submit">Generate Chart</button>
+  <input placeholder="Birth Location" formControlName="BirthLocation" class="border p-3 rounded-lg w-full" />
 
+  <button type="submit" [disabled]="loading" class="bg-emerald-600 text-white py-3 rounded-xl font-semibold hover:bg-emerald-700">
+    {{ loading ? 'Generating...' : 'Generate Preview' }}
+  </button>
 </form>

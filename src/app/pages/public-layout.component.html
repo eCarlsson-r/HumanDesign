@@ -1,0 +1,46 @@
+<div class="min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 border-b bg-white border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a routerLink="/" class="text-xl font-bold text-emerald-600">
+        Human Design
+      </a>
+
+      <nav class="space-x-6 text-sm font-medium">
+        <a routerLink="/login"
+           *ngIf="!isLoggedIn"
+           class="hover:text-emerald-600">
+          Login
+        </a>
+
+        <a routerLink="/register"
+           *ngIf="!isLoggedIn"
+           class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">
+          Get Started
+        </a>
+
+        <a routerLink="/app/dashboard"
+           *ngIf="isLoggedIn"
+           class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">
+          Dashboard
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="flex-1">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sticky bottom-0 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
+      <div>© 2026 Human Design Platform</div>
+      <div>Built with AI + Human Design Engine</div>
+    </div>
+  </footer>
+
+</div>

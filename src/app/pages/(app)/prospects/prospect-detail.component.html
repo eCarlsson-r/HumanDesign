@@ -1,0 +1,30 @@
+<div *ngIf="prospect" class="p-8">
+
+  <h1 class="text-2xl font-bold mb-6">
+    {{ prospect.fullName }}
+  </h1>
+
+  <div class="grid md:grid-cols-2 gap-8">
+
+    <!-- Personal Info -->
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="font-semibold mb-4">Personal Info</h2>
+      <p><b>Email:</b> {{ prospect.email }}</p>
+      <p><b>Phone:</b> {{ prospect.phone }}</p>
+      <p><b>Status:</b> {{ prospect.status }}</p>
+      <p><b>Owner:</b> {{ prospect.owner }}</p>
+      <p><b>Created:</b> {{ prospect.createdAt | date:'medium' }}</p>
+    </div>
+
+    <!-- Design Info -->
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="font-semibold mb-4">Design</h2>
+      <p><b>Type:</b> {{ prospect.design.type }}</p>
+      <p><b>Authority:</b> {{ prospect.design.authority }}</p>
+      <p><b>Definition:</b> {{ prospect.design.definition }}</p>
+      <p><b>Profile:</b> {{ prospect.design.profile }}</p>
+    </div>
+
+  </div>
+
+</div>

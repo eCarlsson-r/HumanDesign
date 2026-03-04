@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -9,11 +9,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './birth-form.component.html'
 })
 export class BirthFormComponent {
-
+  @Input() loading = false;
   @Output() submitted = new EventEmitter<any>();
 
   form = this.fb.group({
     FullName: '',
+    Email: '',
+    Phone: '',
     BirthDate: '',
     BirthTime: '',
     BirthLocation: ''

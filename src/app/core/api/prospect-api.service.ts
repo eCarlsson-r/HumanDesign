@@ -46,8 +46,16 @@ export class ProspectApiService {
 
   constructor(private http: HttpClient) {}
 
-  createProspect(req: CreateProspectRequest): Observable<string> {
-    return this.http.post<string>(this.baseUrl, req);
+  getProspect(id: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/${id}`);
+  }
+
+  getProspects(page: number, pageSize: number, search: string): Observable<{items: any[], total: number}> {
+    return this.http.get<{items: any[], total: number}>(`${this.baseUrl}?page=${page}&pageSize=${pageSize}&search=${search}`);
+  }
+
+  createProspect(req: CreateProspectRequest, referralCode: string | null): Observable<{prospectId: string | null, report: HumanDesignReport}> {
+    return this.http.post<{prospectId: string | null, report: HumanDesignReport}>(referralCode ? this.baseUrl+`?r=${referralCode}` : this.baseUrl, req);
   }
 
   getReport(id: string): Observable<HumanDesignReport> {

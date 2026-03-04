@@ -34,24 +34,10 @@ export class DiagramEngineService {
   // ---------- GATES ----------
 
   private renderGates(svg: SVGSVGElement, gates: any[]) {
-    console.info(gates);
-    const seen = new Set();
-    // Filter for items whose property value has already been added to the Set
-    const duplicates = gates.filter(item => {
-      const value = parseInt(item.key.replace("Gate", ""));
-      console.info(value, seen.has(value));
-      if (seen.has(value)) return true;
-      seen.add(value);
-      return false;
-    });
-    console.info(seen);
-    console.info(duplicates);
-
     gates.forEach(g => {
-      const gateId = parseInt(g.key.replace("Gate", ""));
-      if (duplicates.includes(g)) {
+      const gateId = parseInt(g.gate);
+      if (g.Type === "Both") {
         const design = svg.getElementById(`design-${gateId}`);
-        console.info(design);
         if (!design) return;
 
         design.setAttribute('fill', '#d9534f');
@@ -60,30 +46,26 @@ export class DiagramEngineService {
         if (!el) return;
 
         el.setAttribute('fill', '#495057');
-      } else {
-        if (g.type === "Design") {
-          const design = svg.getElementById(`design-${gateId}`);
-          if (!design) return;
+      } else if (g.type === "Design") {
+        const design = svg.getElementById(`design-${gateId}`);
+        if (!design) return;
 
-          design.setAttribute('fill', '#d9534f');
+        design.setAttribute('fill', '#d9534f');
 
-          const el = svg.getElementById(`personality-${gateId}`);
-          if (!el) return;
+        const el = svg.getElementById(`personality-${gateId}`);
+        if (!el) return;
 
-          el.setAttribute('fill', '#d9534f');
-        }
+        el.setAttribute('fill', '#d9534f');
+      } else if (g.type === "Personality") {
+        const design = svg.getElementById(`design-${gateId}`);
+        if (!design) return;
 
-        if (g.type === "Personality") {
-          const design = svg.getElementById(`design-${gateId}`);
-          if (!design) return;
+        design.setAttribute('fill', '#495057');
 
-          design.setAttribute('fill', '#495057');
+        const el = svg.getElementById(`personality-${gateId}`);
+        if (!el) return;
 
-          const el = svg.getElementById(`personality-${gateId}`);
-          if (!el) return;
-
-          el.setAttribute('fill', '#495057');
-        }
+        el.setAttribute('fill', '#495057');
       }
 
       const el = svg.getElementById(`fill-${gateId}`);
