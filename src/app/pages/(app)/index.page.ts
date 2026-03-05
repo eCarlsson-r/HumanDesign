@@ -14,10 +14,11 @@ export default class HomePage implements OnInit {
 
   ngOnInit() {
     const role = this.auth.getRole();
+    console.info(this.auth);
 
     if (role === 'Admin') this.router.navigate(['/app/admin-dashboard']);
     else if (role === 'Leader') this.router.navigate(['/app/leader-dashboard']);
     else if (role === 'Agent') this.router.navigate(['/app/agent-dashboard']);
-    else this.router.navigate(['/app/my-reports']);
+    else this.router.navigate(['/report/']);
   }
 }

@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event);
 
   // TODO: call C# backend
-  const response = await $fetch('http://localhost:5016/api/prospects', {
+  const response = await $fetch(`${import.meta.env['VITE_API_URL']}/prospects`, {
     method: 'POST',
     body
   });

@@ -38,7 +38,7 @@ export default class LoginComponent {
     this.auth.login(this.email, this.password).subscribe({
       next: (res) => {
         this.auth.saveToken(res.token);
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/']);
       },
       error: () => alert("Invalid credentials")
     });

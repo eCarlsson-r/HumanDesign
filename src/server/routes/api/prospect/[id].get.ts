@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const id = event.context.params!['id'];
 
   const report = await $fetch(
-    `http://localhost:5016/api/prospects/${id}/report`
+    `${import.meta.env['VITE_API_URL']}/prospects${id}/report`
   );
 
   return report;

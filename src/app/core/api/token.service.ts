@@ -1,4 +1,4 @@
-import { afterNextRender, Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({ providedIn: 'root' })
@@ -12,16 +12,11 @@ export class TokenService {
   }
 
   set(token: string) {
-    afterNextRender(() => {
-      localStorage.setItem(this.key, token);
-    });
-
+    if (isPlatformBrowser(this.platformId)) localStorage.setItem(this.key, token);
   }
 
   clear() {
-    afterNextRender(() => {
-      localStorage.removeItem(this.key);
-    });
+    if (isPlatformBrowser(this.platformId)) localStorage.removeItem(this.key);
   }
 
   isLoggedIn(): boolean {

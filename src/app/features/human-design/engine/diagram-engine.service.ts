@@ -1,12 +1,24 @@
 import { Injectable } from '@angular/core';
 
+const CENTER_COLORS: Record<string, string> = {
+  Head: "#8A02B0",
+  Ajna: "#064AFB",
+  Throat: "#03D5F2",
+  G: "#FDF500",
+  Heart: "#F4A6B8",
+  SolarPlexus: "#FDB304",
+  Sacral: "#FF1A00",
+  Spleen: "#79DC04",
+  Root: "#954D02"
+};
+
 @Injectable({ providedIn: 'root' })
 export class DiagramEngineService {
 
   render(svg: SVGSVGElement, chart: any) {
     this.renderCenters(svg, chart.centers);
     this.renderGates(svg, chart.gates);
-    this.renderArrows(svg, chart.variables);
+    this.renderArrows(svg, chart.arrows);
   }
 
   // ---------- CENTERS ----------
@@ -15,18 +27,7 @@ export class DiagramEngineService {
     centers.forEach(c => {
       const el = svg.getElementById(`center-${c.name}`);
       if (!el) return;
-      let filledColor = '#ffffff';
-      switch(c.name) {
-        case "Head": filledColor = "#8A02B0"; break;
-        case "Ajna": filledColor = "#064AFB"; break;
-        case "Throat": filledColor = "#03D5F2"; break;
-        case "G": filledColor = "#FDF500"; break;
-        case "Heart": filledColor = "#F4A6B8"; break;
-        case "SolarPlexus": filledColor = "#FDB304"; break;
-        case "Sacral": filledColor = "#FF1a00"; break;
-        case "Spleen": filledColor = "#79DC04"; break;
-        case "Root": filledColor = "#954D02"; break;
-      }
+      const filledColor = CENTER_COLORS[c.name] ?? '#ffffff';
       el.setAttribute('fill', c.isDefined ? filledColor : '#ffffff');
     });
   }
@@ -36,47 +37,27 @@ export class DiagramEngineService {
   private renderGates(svg: SVGSVGElement, gates: any[]) {
     gates.forEach(g => {
       const gateId = parseInt(g.gate);
-      if (g.Type === "Both") {
-        const design = svg.getElementById(`design-${gateId}`);
-        if (!design) return;
 
+      const design = svg.getElementById(`design-${gateId}`);
+      const personality = svg.getElementById(`personality-${gateId}`);
+      if (!design || !personality) return;
+
+      if (g.type === "Both") {
         design.setAttribute('fill', '#d9534f');
-
-        const el = svg.getElementById(`personality-${gateId}`);
-        if (!el) return;
-
-        el.setAttribute('fill', '#495057');
+        personality.setAttribute('fill', '#495057');
       } else if (g.type === "Design") {
-        const design = svg.getElementById(`design-${gateId}`);
-        if (!design) return;
-
         design.setAttribute('fill', '#d9534f');
-
-        const el = svg.getElementById(`personality-${gateId}`);
-        if (!el) return;
-
-        el.setAttribute('fill', '#d9534f');
+        personality.setAttribute('fill', '#d9534f');
       } else if (g.type === "Personality") {
-        const design = svg.getElementById(`design-${gateId}`);
-        if (!design) return;
-
         design.setAttribute('fill', '#495057');
-
-        const el = svg.getElementById(`personality-${gateId}`);
-        if (!el) return;
-
-        el.setAttribute('fill', '#495057');
+        personality.setAttribute('fill', '#495057');
       }
 
-      const el = svg.getElementById(`fill-${gateId}`);
-      if (!el) return;
-
-      el.setAttribute('fill', '#000');
+      const fill = svg.getElementById(`fill-${gateId}`);
+      fill?.setAttribute('fill', '#000');
 
       const text = svg.getElementById(`${gateId}`);
-      if (!text) return;
-
-      text.setAttribute('fill', '#FFF');
+      text?.setAttribute('fill', '#FFF');
     });
   }
 
@@ -84,14 +65,15 @@ export class DiagramEngineService {
 
   private renderArrows(svg: SVGSVGElement, arrows: any) {
     Object.entries(arrows).forEach(([key, arrow]: any) => {
-      if (!key.includes('Arrow')) return;
-      const el = svg.getElementById(`${key.replace('Arrow', '')}-arrow`);
-      if (!el) return;
+      if (!key) return;
+      const name = key.toLowerCase();
+      const arrowEl = svg.getElementById(`${name}-arrow`);
+      if (!arrowEl) return;
 
-      if (arrow.direction === 'left') el.setAttribute('transform', 'rotate(180deg)');
+      if (arrow.direction === 'left') arrowEl.setAttribute('transform', 'rotate(180deg)');
 
-      svg.getElementById(`${key.replace('Arrow', '')}-color`).textContent = arrow.color;
-      svg.getElementById(`${key.replace('Arrow', '')}-tone`).textContent = arrow.tone;
+      svg.getElementById(`${name}-color`)!.textContent = arrow.color;
+      svg.getElementById(`${name}-tone`)!.textContent = arrow.tone;
     });
   }
 }

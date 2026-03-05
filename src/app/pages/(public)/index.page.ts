@@ -1,5 +1,6 @@
-import { afterNextRender, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 import { BirthFormComponent } from '../../features/human-design/components/birth-form.component';
 import { BodygraphComponent } from '../../features/human-design/components/bodygraph-component';
 import { ChartPanelComponent } from '../../features/human-design/components/chart-panel.component';
@@ -27,6 +28,7 @@ export default class HomeComponent implements OnInit {
   redirecting = true;
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
     private api: ProspectApiService,
     private route: ActivatedRoute,
     private token: TokenService,
@@ -52,11 +54,9 @@ export default class HomeComponent implements OnInit {
       next: (res) => {
         this.previewReport = res.report;
         this.prospectId = res.prospectId;
-        afterNextRender(() => {
-          localStorage.setItem('prospectId', this.prospectId!);
-          this.loading = false;
-          this.cdr.detectChanges();
-        });
+        if (isPlatformBrowser(this.platformId)) localStorage.setItem('prospectId', this.prospectId!);
+        this.loading = false;
+        this.cdr.detectChanges();
       },
       error: () => {
         this.loading = false;
