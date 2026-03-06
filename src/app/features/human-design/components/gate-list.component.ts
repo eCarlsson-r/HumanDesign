@@ -8,24 +8,24 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="rounded-xl p-4 text-white" [ngClass]="themeClass">
 
-      <h2 class="font-bold mb-4 text-md text-center">{{ theme }}</h2>
-      <h2 class="font-bold mb-4 text-sm text-center">{{ title }}</h2>
+      <h2 class="text-xl font-bold mb-4 text-md text-center">{{ theme.toUpperCase() }}</h2>
+      <h2 class="text-lg font-bold mb-4 text-sm text-center">{{ title.toUpperCase() }}</h2>
 
       <div *ngIf="theme == 'design'">
         <div *ngFor="let gate of gates"
             class="flex justify-between items-center py-1 text-base font-semibold">
-          <span class="text-3xl">{{ planetSymbol(gate.planet) }}</span>
-          <span>{{ gate.gate }}.{{ gate.line }}</span>
-          <span class="text-3xl">{{ gateDirection(gate.fixingState) }}</span>
+          <span class="text-xl text-left">{{ planetSymbol(gate.planet) }}</span>
+          <span class="text-center">{{ gate.gate }}.{{ gate.line }}</span>
+          <span class="text-3xl text-right">{{ gateDirection(gate.fixingState) }}</span>
         </div>
       </div>
 
       <div *ngIf="theme == 'personality'">
         <div *ngFor="let gate of gates"
             class="flex justify-between items-center py-1 text-base font-semibold">
-          <span class="text-3xl">{{ gateDirection(gate.fixingState) }}</span>
-          <span>{{ gate.gate }}.{{ gate.line }}</span>
-          <span class="text-3xl">{{ planetSymbol(gate.planet) }}</span>
+          <span class="text-3xl text-left">{{ gateDirection(gate.fixingState) }}</span>
+          <span class="text-center">{{ gate.gate }}.{{ gate.line }}</span>
+          <span class="text-xl text-right">{{ planetSymbol(gate.planet) }}</span>
         </div>
       </div>
     </div>

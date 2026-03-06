@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas-pro';
 import jsPDF from 'jspdf';
 
 @Injectable({ providedIn: 'root' })

@@ -1,15 +1,27 @@
 export interface HumanDesignReport {
-  name: string;
-  type: string;
-  strategy: string;
-  authority: string;
-  profile: string;
-  incarnationCrossDescription: string;
-  definedCenters: any[];
-  channels: any[];
-  gates: any[];
+  level: string;
+  type: HdContent;
+  strategy: HdContent;
+  signature: HdContent;
+  notSelfTheme: HdContent;
+  authority: HdContent;
+  definition: HdContent;
+  profile: HdContent;
+  cross: HdContent;
+  variables: any;
+  arrows: HdVariables;
+  centers: HdCenter[];
+  gates: HdGate[];
+  designGates: HdGateDetail[];
+  channels: HdContent[];
 }
 
+export interface HdContent {
+  key: string;
+  title: string;
+  description: string;
+  imageId: null
+}
 export interface HdChart {
   centers: HdCenter[],
   gates: HdGate[],
@@ -19,11 +31,24 @@ export interface HdChart {
 export interface HdCenter {
   name: string;
   isDefined: boolean;
+  content: HdContent;
 }
 
 export interface HdGate {
   gate: number;
-  type: "Design" | "Personality" | "Both"
+  type: "Design" | "Personality" | "Both",
+  title: string;
+  description: string;
+}
+
+export interface HdGateDetail {
+  gate: number;
+  line: number;
+  type: "Design" | "Personality" | "Both";
+  fixingState: "None" | "Juxtaposed" | "Exalted" | "Detriment";
+  planet: string,
+  center: string
+  quarter: string
 }
 
 export interface HdArrow {

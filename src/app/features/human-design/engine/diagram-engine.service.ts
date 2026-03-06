@@ -70,7 +70,7 @@ export class DiagramEngineService {
       const arrowEl = svg.getElementById(`${name}-arrow`);
       if (!arrowEl) return;
 
-      if (arrow.direction === 'left') arrowEl.setAttribute('transform', 'rotate(180deg)');
+      if (arrow.isLeft) arrowEl.setAttribute('transform', 'rotate(180deg)');
 
       svg.getElementById(`${name}-color`)!.textContent = arrow.color;
       svg.getElementById(`${name}-tone`)!.textContent = arrow.tone;

@@ -19,7 +19,7 @@ export const guestGuard: CanActivateFn = () => {
   const router = inject(Router);
 
   if (token.isLoggedIn()) {
-    router.navigate(['/app']);
+    router.navigate(['/dashboard']);
     return false;
   }
   return true;
@@ -31,7 +31,7 @@ export const roleGuard = (allowedRoles: string[]):CanActivateFn => {
     const router = inject(Router);
 
     if (!allowedRoles.includes(auth.getRole() || "")) {
-      router.navigate(['/app']);
+      router.navigate(['/dashboard']);
       return false;
     }
 

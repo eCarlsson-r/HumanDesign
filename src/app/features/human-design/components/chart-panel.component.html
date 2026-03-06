@@ -4,7 +4,7 @@
   <p><b>Authority:</b> {{ report.authority.title }}</p>
   <p><b>Profile:</b> {{ report.profile.title }}</p>
 
-  <h4 className="text-xl font-semibold">Active Channels</h4>
+  <h4 class="text-2xl font-bold">Active Channels</h4>
   <ul>
     <li *ngFor="let c of report.channels" class="justify-center items-center">
       <span class=" text-xl font-bold">{{ c.key }}</span> {{ c.title }}

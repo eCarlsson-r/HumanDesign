@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { ProspectApiService } from '../../../core/api/prospect-api.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'admin-prospect-list',
   templateUrl: './prospect-list.component.html',
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, RouterLink]
 })
-export class ProspectListComponent implements OnInit {
+export default class ProspectListComponent implements OnInit {
 
-  prospects: any[] = [];
+  prospects = signal<any[]>([]);
   total = 0;
   page = 1;
   pageSize = 20;
@@ -28,7 +29,7 @@ export class ProspectListComponent implements OnInit {
 
     this.api.getProspects(this.page, this.pageSize, this.search)
       .subscribe(res => {
-        this.prospects = res.items;
+        this.prospects.set(res.items);
         this.total = res.total;
         this.loading = false;
       });

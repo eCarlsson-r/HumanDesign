@@ -1,15 +1,41 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { TokenService } from './token.service';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  private http = inject(HttpClient);
+  constructor(
+    private http: HttpClient,
+    private token: TokenService
+  ) {}
 
   get<T>(url: string) {
-    return this.http.get<T>(`${import.meta.env['VITE_API_URL']}${url}`);
+    const authToken = this.token.get();
+    if (authToken) return this.http.get<T>(`api/${url}`, {
+      headers: {
+        authorization: authToken ?? ''
+      }
+    });
+    else return this.http.get<T>(`api/${url}`);
   }
 
   post<T>(url: string, body: any) {
-    return this.http.post<T>(`${import.meta.env['VITE_API_URL']}${url}`, body);
+    const authToken = this.token.get();
+    if (authToken) return this.http.post<T>(`api/${url}`, body, {
+      headers: {
+        authorization: authToken ?? ''
+      }
+    });
+    else return this.http.post<T>(`api/${url}`, body);
+  }
+
+  put<T>(url: string, body: any) {
+    const authToken = this.token.get();
+    if (authToken) return this.http.put<T>(`api/${url}`, body, {
+      headers: {
+        authorization: authToken ?? ''
+      }
+    });
+    else return this.http.put<T>(`api/${url}`, body);
   }
 }

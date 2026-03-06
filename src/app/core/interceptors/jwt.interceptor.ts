@@ -15,6 +15,7 @@ export class JwtInterceptor implements HttpInterceptor {
     }
 
     const token = this.token.get();
+    console.info(token);
 
     if (token) {
       req = req.clone({

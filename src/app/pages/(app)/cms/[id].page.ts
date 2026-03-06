@@ -1,12 +1,12 @@
-import { Component, inject, signal } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { NgIf } from '@angular/common';
+import { Component, Inject, inject, PLATFORM_ID, signal } from '@angular/core';
+import { ActivatedRoute, RouterLink, } from '@angular/router';
+import { isPlatformBrowser, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { Editor as ClassicEditor, EditorWatchdog } from '@ckeditor/ckeditor5-build-classic';
-import { roleGuard } from '../../core/guards/auth.guard';
+import { RouteMeta } from '@analogjs/router';
+import { roleGuard } from '../../../core/guards/auth.guard';
+import { ApiService } from '../../../core/api/api.service';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export const routeMeta: RouteMeta = {
   canActivate: [roleGuard(['Admin'])],
@@ -16,14 +16,14 @@ export const routeMeta: RouteMeta = {
   standalone: true,
   imports: [NgIf, FormsModule, RouterLink, CKEditorModule],
   template: `
-  <div class="p-8" *ngIf="model()">
+  <div class="p-8 max-w-7xl mx-auto" *ngIf="model()">
 
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold">
         Editing: {{ model().title }}
       </h1>
 
-      <a routerLink="/admin/cms"
+      <a routerLink="/cms"
          class="text-gray-600 hover:underline">
         Back
       </a>
@@ -40,31 +40,22 @@ export const routeMeta: RouteMeta = {
 
       <div>
         <label class="block font-medium mb-2">Preview</label>
-        <ckeditor
-          [editor]="Editor"
-          [(ngModel)]="model().preview">
-        </ckeditor>
+        <ckeditor [editor]="Editor" [(ngModel)]="model().preview" />
       </div>
 
       <div>
         <label class="block font-medium mb-2">Summary</label>
-        <ckeditor
-          [editor]="Editor"
-          [(ngModel)]="model().summary">
-        </ckeditor>
+        <ckeditor [editor]="Editor" [(ngModel)]="model().summary" />
       </div>
 
       <div>
         <label class="block font-medium mb-2">Detail</label>
-        <ckeditor
-          [editor]="Editor"
-          [(ngModel)]="model().detail">
-        </ckeditor>
+        <ckeditor [editor]="Editor" [(ngModel)]="model().detail" />
       </div>
 
       <button
         (click)="save()"
-        class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+        class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700">
         Save Changes
       </button>
 
@@ -79,11 +70,20 @@ export const routeMeta: RouteMeta = {
   `
 })
 export default class CmsEditPage {
+  public Editor: any;
 
-  Editor = ClassicEditor;
-
-  private route = inject(ActivatedRoute);
-  private http = inject(HttpClient);
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private route: ActivatedRoute,
+    private api: ApiService
+  ) {
+    // Only load the editor if it's running in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      import('@ckeditor/ckeditor5-build-classic').then(ClassicEditor => {
+        this.Editor = ClassicEditor.default;
+      });
+    }
+  }
 
   model = signal<any | null>(null);
   saved = signal(false);
@@ -91,14 +91,14 @@ export default class CmsEditPage {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
 
-    this.http.get(`/api/cms/attributes/${id}`)
+    this.api.get(`cms/${id}`)
       .subscribe(res => this.model.set(res));
   }
 
   save() {
     this.saved.set(false);
 
-    this.http.put(`/api/cms/attributes/${this.model().id}`, this.model())
+    this.api.put(`cms/${this.model().id}`, this.model())
       .subscribe(() => {
         this.saved.set(true);
       });

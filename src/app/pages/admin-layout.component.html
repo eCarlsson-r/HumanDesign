@@ -2,32 +2,27 @@
   <!-- Navbar -->
   <header class="border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a routerLink="/" class="text-xl font-bold text-emerald-600">
+      <a routerLink="/dashboard" class="text-xl font-bold text-emerald-600">
         Human Design
       </a>
 
       <nav class="space-x-6 text-sm font-medium">
-        <a routerLink="/admin/dashboard"
-         class="px-3 py-2 rounded-lg hover:bg-emerald-800 hover:text-white">
-          Dashboard
-        </a>
-
         <a *ngIf="role==='Admin'"
-          routerLink="/admin/cms"
+          routerLink="/cms"
           class="px-3 py-2 rounded-lg hover:bg-emerald-800 hover:text-white">
           CMS
         </a>
 
         <a *ngIf="role!=='User'"
-          routerLink="/admin/crm"
-          class="px-3 py-2 rounded-lg hover:bg-emerald-800">
-          CRM
+          routerLink="/prospects"
+          class="px-3 py-2 rounded-lg hover:bg-emerald-800 hover:text-white">
+          Prospect
         </a>
 
         <a *ngIf="role==='Admin'"
-          routerLink="/admin/users"
-          class="px-3 py-2 rounded-lg hover:bg-emerald-800">
-          Users
+          routerLink="/agents"
+          class="px-3 py-2 rounded-lg hover:bg-emerald-800 hover:text-white">
+          Agents
         </a>
 
         <button

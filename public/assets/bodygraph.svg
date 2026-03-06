@@ -4,28 +4,28 @@
             <path d="M249.139.137c6.688.846 16.836 8.569 15.786 24.173-.255 3.88-2.111 13.389-5.94 21.658 1.072 1.631 1.898 3.402 2.543 5.143C299.679 56.5 311 81.078 311 115.41c0 17.832-6.148 29.799-16.613 37.501-3.955 20.889-14.857 37.972-29.149 46.401l-.064 12.367c0 10.591.236 21.289 1.609 31.452.707 5.028 11.854 13.319 14.994 15.94 4.318 3.584 8.91 6.526 13.738 8.612 7.575 3.263 15.308 4.012 23.158 4.975 17.898 2.14 26.415 14.603 32.067 37.764 6.359 26.049 8.007 128.749 20.175 157.045 3.807 8.879 10.009 15.672 17.309 22.252 8.871 7.97 17.427 16.582 26.219 24.712l9.538 8.665c2.12 1.926 7.693 8.986 10.166 8.986.707.267 3.611 1.284 4.278 1.284 6.516 0 15.896-15.031 24.845-15.031 2.237 0 5.691 1.498 5.691 4.547 0 5.67-13.227 10.003-17.859 19.898 3.297 6.098 7.968 11.875 13.463 11.875 7.85 0 10.558-9.361 10.558-19.952 0-3.527-.335-6.894-.567-8.807l-.068-.543-.121-.883-.019-.126-.011-.072c0-.588.275-.802.746-.802 5.024 0 6.398 9.842 6.398 16.689 0 19.31-9.695 26.959-20.449 30.489.707.16 5.613 1.23 6.359 1.23 6.633 0 16.21-7.809 20.449-7.809 1.021 0 2.159.963 2.159 2.193-.314 14.014-13.424 16.956-23.629 16.956-2.551 0-5.495-.588-8.007-2.086 1.531 2.835 3.258 5.349 5.731 6.847 1.789 1.09 4.237 1.809 6.676 2.685l.504.184c4.45 1.645 8.716 3.933 8.716 10.076 0 1.402-2.968 2.233-4.816 2.42l.592.796c1.529 1.888 2.948 3.978 4.233 6.214l-.083.001.083.135-.721.56a56.89 56.89 0 0 1 6.216 18.573c.325 2.201.488 4.306.504 6.319v.243c.137 14.689-7.634 24.534-17.626 31.197-20.886 13.945-44.868 16.037-67.713 16.681l-16.365.402-6.55.15-24.822.714c.706 1.576 1.078 3.284 1.078 5.159 0 .552-.041 1.039-.126 1.468l.126.053c-.51 2.51-2.51 2.991-6.588 2.991a21.38 21.38 0 0 1-.03 0h-.143c-6.469 0-12.988-2.976-19.536-6.185l-1.092-.537h0l-1.638-.807-1.093-.535c-.96.04-2.06.061-3.288.063h-.484l-.596-.002c-11.614-.057-33.232-1.519-56.195-2.996l-1.703-.109h0l-2.836.46-2.19.353c-6.568 1.051-13.13 2.023-19.683 2.559-4.795.43-9.591.698-14.425.86-19.535.698-39.306-.215-58.33-1.665-16.406-1.261-32.829-1.746-49.257-2.139l-6.572-.154-19.717-.501c-22.916-.645-46.971-2.74-67.921-16.707C9.324 659.329.794 647.726 3.507 629.46c1.434-9.76 5.691-19.361 11.429-26.115-1.845-.18-4.848-1.012-4.848-2.423 0-7.37 6.075-9.191 11.288-10.988l.486-.169c1.53-.535 2.964-1.082 4.122-1.788 2.473-1.498 4.2-4.012 5.731-6.847-2.512 1.498-5.456 2.086-8.007 2.086-10.181 0-23.093-2.831-23.693-16.486L0 566.315v-.053c0-1.23 1.138-2.193 2.159-2.193 4.278 0 13.816 7.809 20.449 7.809.746 0 5.613-1.07 6.359-1.23-10.755-3.53-20.449-11.179-20.449-30.489 0-6.9 1.374-16.689 6.398-16.689.432 0 .746.214.746.802l-.011.072-.019.126-.121.883-.04.312c-.232 1.864-.595 5.365-.595 9.038 0 10.591 2.708 19.952 10.558 19.952 5.495 0 10.166-5.777 13.463-11.875-4.671-9.896-17.859-14.228-17.859-19.898 0-3.049 3.454-4.547 5.691-4.547 8.949 0 18.33 15.031 24.845 15.031.667 0 3.533-1.016 4.278-1.284 2.473 0 8.007-7.061 10.166-8.986l9.538-8.665 26.219-24.712c7.301-6.579 13.502-13.372 17.309-22.252 12.168-28.296 13.816-130.942 20.175-157.045 5.652-23.161 14.169-35.624 32.067-37.764 7.85-.909 15.622-1.658 23.158-4.975 4.828-2.086 9.42-5.028 13.738-8.612 3.14-2.567 14.326-10.912 14.994-15.94 1.374-10.217 1.609-20.861 1.609-31.452l-.063-12.37c-14.072-8.295-24.859-24.985-28.962-45.437C181.071 142.955 176 126.175 176 110.358c0-36.18 26.986-54.364 54.031-59.089.392-1.19.874-2.292 1.431-3.309-4.09-6.954-6.955-15.556-6.39-24.126 1.011-15.287 12.17-25.125 24.068-23.697zm-78.675 349.866c.55 1.177-3.179 12.249-3.572 14.068-1.256 5.616-2.394 11.286-3.454 17.01-1.413 7.489-2.669 15.031-3.886 22.573-1.192 7.455-2.078 15.208-2.952 23.03l-.228 2.042-.344 3.067-.232 2.046-.295 2.558-.201 1.704-.521 4.254-.218 1.698c-2.653 20.353-6.699 40.039-17.343 55.027-6.398 8.986-14.248 16.154-21.862 22.466-14.915 12.356-30.929 22.305-47.179 30.863l.039.053c-5.319 3.812-9.79 11.403-13.724 19.817 29.652-15.203 67.207-22.414 102.202-25.046-1.108-.645-2.148-1.31-3.114-1.992 1.609-12.808 6.658-20.428 12.056-28.025l.792-1.112.226-.317h0l.453-.636.227-.319.453-.639.453-.642.453-.646c6.781-9.722 13.199-20.926 13.199-43.725 0-16.278-1.244-28.56-2.82-38.863C168.881 424.058 162 412.154 162 398.5c0-11.035 4.494-20.926 11.597-27.619.517-3.297 1.14-5.922 1.616-8.308-1.295-4.44-2.865-8.665-4.749-12.57zm149.151 0c-1.923 3.905-3.454 8.184-4.749 12.57.536 2.657 1.258 5.648 1.804 9.565 6.367 6.644 10.33 15.998 10.33 26.361 0 15.796-9.21 29.249-22.098 34.331-2.241 9.634-3.413 20.74-1.802 34.635 4.708 40.607 32.913 76.837 33.029 77.774a68.38 68.38 0 0 1-2.868 1.917c34.817 2.53 72.28 9.575 102.039 24.508-3.866-8.167-8.248-15.484-13.438-19.204l.039-.053c-16.25-8.558-32.264-18.507-47.179-30.863-7.615-6.312-15.504-13.479-21.862-22.466-11.321-15.975-15.177-37.309-17.841-59.079l-.208-1.719-.404-3.442-.234-2.046-.116-1.023-.23-2.045-.229-2.043-.229-2.04c-.84-7.473-1.703-14.869-2.843-21.989l-3.886-22.573-3.454-17.01c-.432-1.819-4.121-12.891-3.572-14.068z" fill="#f2f2f2"></path>
         </g>
         <g id="arrows-layer">
-            <text x="90" y ="90" fill="#d9534f" font-size="24" font-family="sans-serif">
+            <text x="90" y ="90" fill="#d9534f" font-size="24" font-family="Inter, Avenir, Helvetica, Arial, sans-serif">
                 <tspan id="digestion-color">H</tspan>
                 <tspan id="digestion-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
             </text>
             <g id="digestion-arrow" transform="translate(50,75)" width="27" height="20" fill="#d9534f" stroke="#d9534f">
                 <path d="M17.15.585l-2.398 2.463a.43.43 0 0 0 .001.604l4.063 4.144H1.243a.43.43 0 0 0-.432.432v3.455a.43.43 0 0 0 .432.432h17.573l-4.063 4.144a.43.43 0 0 0-.001.603l2.398 2.463a.43.43 0 0 0 .618 0l8.829-9.068a.43.43 0 0 0 0-.602L17.769.585a.43.43 0 0 0-.618 0z"></path>
             </g>
-            <text x="90" y ="140" fill="#d9534f" font-size="24" font-family="sans-serif">
+            <text x="90" y ="140" fill="#d9534f" font-size="24" font-family="Inter, Avenir, Helvetica, Arial, sans-serif">
                 <tspan id="environment-color">H</tspan>
                 <tspan id="environment-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
             </text>
             <g id="environment-arrow" transform="translate(50,125)" width="27" height="20" fill="#d9534f" stroke="#d9534f">
                 <path d="M17.15.585l-2.398 2.463a.43.43 0 0 0 .001.604l4.063 4.144H1.243a.43.43 0 0 0-.432.432v3.455a.43.43 0 0 0 .432.432h17.573l-4.063 4.144a.43.43 0 0 0-.001.603l2.398 2.463a.43.43 0 0 0 .618 0l8.829-9.068a.43.43 0 0 0 0-.602L17.769.585a.43.43 0 0 0-.618 0z"></path>
             </g>
-            <text x="360" y ="90" fill="#495057" font-size="24" font-family="sans-serif">
+            <text x="360" y ="90" fill="#495057" font-size="24" font-family="Inter, Avenir, Helvetica, Arial, sans-serif">
                 <tspan id="awareness-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
                 <tspan id="awareness-color">H</tspan>
             </text>
             <g id="awareness-arrow" transform="translate(410,75)" width="27" height="20" fill="#495057" stroke="#495057">
                 <path d="M17.15.585l-2.398 2.463a.43.43 0 0 0 .001.604l4.063 4.144H1.243a.43.43 0 0 0-.432.432v3.455a.43.43 0 0 0 .432.432h17.573l-4.063 4.144a.43.43 0 0 0-.001.603l2.398 2.463a.43.43 0 0 0 .618 0l8.829-9.068a.43.43 0 0 0 0-.602L17.769.585a.43.43 0 0 0-.618 0z"></path>
             </g>
-            <text x="360" y ="140" fill="#495057" font-size="24" font-family="sans-serif">
+            <text x="360" y ="140" fill="#495057" font-size="24" font-family="Inter, Avenir, Helvetica, Arial, sans-serif">
                 <tspan id="perspective-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
                 <tspan id="perspective-color">H</tspan>
             </text>
@@ -258,220 +258,220 @@
             <g id="SolarPlexusCenter" transform="translate(313.000000, 487.000000)">
                 <path fill="#FFFFFF" id="center-SolarPlexus" d="M15.0429258,1.32732883 L80.9486365,39.0153705 C85.7621275,41.7679552 87.4271637,47.8916014 84.667599,52.6929181 C83.7523627,54.2853193 82.416228,55.5963883 80.8049886,56.4830639 L14.8992789,92.7514082 C10.0411664,95.4248601 3.93013152,93.6638034 1.24990037,88.8179779 C0.430011435,87.3356291 0,85.6702458 0,83.9772661 L0,10.0208811 C0,4.48650177 4.49787863,0 10.046292,0 C11.7994131,0 13.5220167,0.457600527 15.0429258,1.32732883 Z" stroke="black" stroke-width="2" transform="translate(43.000000, 47.000000) scale(-1, 1) translate(-43.000000, -47.000000) "></path>
                 <rect fill="#FFFFFF" id="fill-36" x="65" y="4" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="36"><tspan x="68" y="15">36</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="36"><tspan x="68" y="15">36</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-22" x="47" y="15" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="22"><tspan x="50" y="26">22</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="22"><tspan x="50" y="26">22</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-37" x="30" y="24" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="37"><tspan x="33" y="35">37</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="37"><tspan x="33" y="35">37</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-6" x="4" y="40" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="6"><tspan x="10" y="51">6</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="6"><tspan x="10" y="51">6</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-49" x="23" y="51" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="49"><tspan x="26" y="62">49</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="49"><tspan x="26" y="62">49</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-55" x="44" y="64" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="55"><tspan x="47" y="75">55</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="55"><tspan x="47" y="75">55</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-30" x="62" y="73" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="30"><tspan x="65" y="84">30</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="30"><tspan x="65" y="84">30</tspan></text>
             </g>
 
             <g id="HeartCenter" transform="translate(253.000000, 414.000000)">
                 <path fill="#FFFFFF" id="center-Heart" d="M36.9188299,2.40080821 L73.4885745,33.4856532 C77.7032075,37.0681553 78.1930352,43.3625833 74.5826356,47.5446519 C73.1075534,49.2532973 71.0934574,50.4166981 68.8676979,50.8457658 L11.9647876,61.8151384 C6.51703717,62.8653207 1.24279231,59.3345103 0.184432414,53.9288521 C-0.227392205,51.8254226 0.0546295672,49.6463066 0.988712262,47.714383 L21.3218769,5.66016538 C23.7224001,0.695267738 29.7245938,-1.39860577 34.7281535,0.98336823 C35.5174893,1.35913605 36.2539502,1.83565089 36.9188299,2.40080821 Z" stroke="black" stroke-width="2" fill-rule="nonzero" transform="translate(38.500000, 31.000000) scale(-1, 1) translate(-38.500000, -31.000000) "></path>
                 <rect fill="#FFFFFF" id="fill-21" x="37" y="5" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="21"><tspan x="40" y="16">21</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="21"><tspan x="40" y="16">21</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-26" x="4" y="33" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="26"><tspan x="7" y="44">26</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="26"><tspan x="7" y="44">26</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-51" x="23" y="17" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="51"><tspan x="26" y="28">51</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="51"><tspan x="26" y="28">51</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-40" x="55" y="44" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="40"><tspan x="58" y="55">40</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="40"><tspan x="58" y="55">40</tspan></text>
             </g>
 
             <g id="SpleenCenter" transform="translate(0.000000, 487.000000)">
                 <path fill="#FFFFFF" id="center-Spleen" d="M15.0429261,1.32732883 L80.9486362,39.0153705 C85.7621274,41.7679552 87.4271638,47.8916014 84.667599,52.6929181 C83.7523632,54.2853193 82.4162281,55.5963883 80.804989,56.4830639 L14.8992789,92.7514082 C10.0411661,95.4248601 3.93013134,93.6638034 1.24990064,88.8179779 C0.430011768,87.3356291 0,85.6702458 0,83.9772661 L0,10.0208811 C0,4.48650177 4.49787814,0 10.046292,0 C11.7994135,0 13.5220167,0.457600527 15.0429261,1.32732883 Z" stroke="black" stroke-width="2"></path>
                 <rect fill="#FFFFFF" id="fill-50" x="65" y="41" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="50"><tspan x="68" y="52">50</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="50"><tspan x="68" y="52">50</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-32" x="40" y="55" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="32"><tspan x="43" y="66">32</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="32"><tspan x="43" y="66">32</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-28" x="19" y="65" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="28"><tspan x="22" y="76">28</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="28"><tspan x="22" y="76">28</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-18" x="2" y="74" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="18"><tspan x="5" y="85">18</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="18"><tspan x="5" y="85">18</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-48" x="2" y="4" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="48"><tspan x="5" y="15">48</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="48"><tspan x="5" y="15">48</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-57" x="18" y="14" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="57"><tspan x="21" y="25">57</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="57"><tspan x="21" y="25">57</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-44" x="38" y="25" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="44"><tspan x="41" y="36">44</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="44"><tspan x="41" y="36">44</tspan></text>
             </g>
 
             <g id="RootCenter" transform="translate(158.000000, 610.000000)">
                 <rect fill="#FFFFFF" id="center-Root" stroke="black" stroke-width="2" transform="translate(41.500000, 41.500000) rotate(90.000000) translate(-41.500000, -41.500000) " x="0" y="0" width="83" height="83" rx="10"></rect>
                 <rect fill="#FFFFFF" id="fill-60" x="32" y="3" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="60"><tspan x="35" y="14">60</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="60"><tspan x="35" y="14">60</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-58" x="3" y="59" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="58"><tspan x="6" y="70">58</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="58"><tspan x="6" y="70">58</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-41" x="61" y="58" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="41"><tspan x="64" y="69">41</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="41"><tspan x="64" y="69">41</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-39" x="62" y="38" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="39"><tspan x="65" y="49">39</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="39"><tspan x="65" y="49">39</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-19" x="63" y="18" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="19"><tspan x="66" y="29">19</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="19"><tspan x="66" y="29">19</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-52" x="52" y="3" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="52"><tspan x="55" y="14">52</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="52"><tspan x="55" y="14">52</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-53" x="10" y="3" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="53"><tspan x="13" y="14">53</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="53"><tspan x="13" y="14">53</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-54" x="2" y="18" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="54"><tspan x="5" y="29">54</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="54"><tspan x="5" y="29">54</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-38" x="3" y="38" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="38"><tspan x="6" y="49">38</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="38"><tspan x="6" y="49">38</tspan></text>
             </g>
 
             <g id="SacralCenter" transform="translate(158.000000, 499.000000)">
                 <rect fill="#FFFFFF" id="center-Sacral" stroke="black" stroke-width="2" fill-rule="nonzero" transform="translate(41.500000, 41.500000) rotate(90.000000) translate(-41.500000, -41.500000) " x="0" y="0" width="83" height="83" rx="10"></rect>
                 <rect fill="#FFFFFF" id="fill-14" x="32" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="14"><tspan x="35" y="13">14</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="14"><tspan x="35" y="13">14</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-29" x="53" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="29"><tspan x="56" y="13">29</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="29"><tspan x="56" y="13">29</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-5" x="10" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="5"><tspan x="15" y="13">5</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="5"><tspan x="15" y="13">5</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-34" x="4" y="19" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="34"><tspan x="7" y="30">34</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="34"><tspan x="7" y="30">34</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-27" x="2" y="51" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="27"><tspan x="5" y="62">27</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="27"><tspan x="5" y="62">27</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-42" x="11" y="66" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="42"><tspan x="14" y="77">42</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="42"><tspan x="14" y="77">42</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-9" x="53" y="66" width="16" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="9"><tspan x="58" y="77">9</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="9"><tspan x="58" y="77">9</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-3" x="33" y="66" width="16" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="3"><tspan x="38" y="78">3</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="3"><tspan x="38" y="78">3</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-59" x="63" y="52" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="59"><tspan x="66" y="63">59</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="59"><tspan x="66" y="63">59</tspan></text>
             </g>
 
             <g id="GCenter" transform="translate(140.000000, 333.000000)">
                 <rect fill="#FFFFFF" id="center-G" stroke="black" stroke-width="2" fill-rule="nonzero" transform="translate(59.500000, 59.572604) rotate(45.000000) translate(-59.500000, -59.572604) " x="17.9999999" y="18.0726044" width="83" height="83" rx="10"></rect>
                 <rect fill="#FFFFFF" id="fill-1" x="50" y="9" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="1"><tspan x="55" y="20">1</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="1"><tspan x="55" y="20">1</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-7" x="33" y="25" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="7"><tspan x="39" y="36">7</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="7"><tspan x="39" y="36">7</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-13" x="65" y="23" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="13"><tspan x="67" y="34">13</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="13"><tspan x="67" y="34">13</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-25" x="92" y="51" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="25"><tspan x="95" y="62">25</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="25"><tspan x="95" y="62">25</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-10" x="8" y="51" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="10"><tspan x="11" y="62">10</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="10"><tspan x="11" y="62">10</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-15" x="32" y="77" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="15"><tspan x="35" y="88">15</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="15"><tspan x="35" y="88">15</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-2" x="50" y="95" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="2"><tspan x="56" y="106">2</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="2"><tspan x="56" y="106">2</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-46" x="66" y="79" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="46"><tspan x="69" y="90">46</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="46"><tspan x="69" y="90">46</tspan></text>
             </g>
 
             <g id="ThroatCenter" transform="translate(158.000000, 236.000000)">
                 <rect fill="#FFFFFF" id="center-Throat" stroke="black" stroke-width="2" fill-rule="nonzero" transform="translate(41.500000, 41.500000) rotate(90.000000) translate(-41.500000, -41.500000) " x="0" y="0" width="83" height="83" rx="10"></rect>
                 <rect fill="#FFFFFF" id="fill-8" x="32" y="66" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="8"><tspan x="37" y="77">8</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="8"><tspan x="37" y="77">8</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-33" x="51" y="66" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="33"><tspan x="54" y="77">33</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="33"><tspan x="54" y="77">33</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-31" x="12" y="66" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="31"><tspan x="15" y="77">31</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="31"><tspan x="15" y="77">31</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-20" x="3" y="41" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="20"><tspan x="6" y="52">20</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="20"><tspan x="6" y="52">20</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-16" x="3" y="20" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="16"><tspan x="6" y="31">16</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="16"><tspan x="6" y="31">16</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-62" x="11" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="62"><tspan x="14" y="13">62</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="62"><tspan x="14" y="13">62</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-23" x="31" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="23"><tspan x="34" y="13">23</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="23"><tspan x="34" y="13">23</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-56" x="51" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="56"><tspan x="54" y="13">56</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="56"><tspan x="54" y="13">56</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-35" x="62" y="16" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="35"><tspan x="65" y="27">35</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="35"><tspan x="65" y="27">35</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-12" x="62" y="36" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="12"><tspan x="65" y="47">12</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="12"><tspan x="65" y="47">12</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-45" x="63" y="52" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="45"><tspan x="66" y="63">45</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="45"><tspan x="66" y="63">45</tspan></text>
             </g>
 
             <g id="AjnaCenter" transform="translate(156.000000, 111.000000)">
                 <path fill="#FFFFFF" id="center-Ajna" d="M18.9134775,-2.6764231 L78.972703,31.9184424 C83.7540024,34.6725304 85.4165327,40.8147038 82.686068,45.6373709 C81.7749065,47.2467041 80.4405413,48.5707566 78.8303092,49.4633314 L18.7710837,82.7550181 C13.9457239,85.4297841 7.88426871,83.6525404 5.23244566,78.7854318 C4.42391951,77.3014781 4,75.6356173 4,73.9423394 L4,6.05578722 C4,0.502129794 8.46351254,-4 13.9695332,-4 C15.7035909,-4 17.4076623,-3.54379106 18.9134775,-2.6764231 Z" stroke="black" stroke-width="2" fill-rule="nonzero" transform="translate(44.000000, 40.000000) rotate(90.000000) translate(-44.000000, -40.000000) "></path>
                 <rect fill="#FFFFFF" id="fill-24" x="34" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="24"><tspan x="37" y="13">24</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="24"><tspan x="37" y="13">24</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-47" x="11" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="47"><tspan x="14" y="13">47</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="47"><tspan x="14" y="13">47</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-4" x="54" y="2" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="4"><tspan x="59" y="13">4</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="4"><tspan x="59" y="13">4</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-17" x="20" y="34" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="17"><tspan x="22" y="45">17</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="17"><tspan x="22" y="45">17</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-43" x="35" y="61" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="43"><tspan x="38" y="72">43</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="43"><tspan x="38" y="72">43</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-11" x="50" y="34" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="11"><tspan x="53" y="45">11</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="11"><tspan x="53" y="45">11</tspan></text>
             </g>
 
             <g id="HeadCenter" transform="translate(156.000000, 0.000000)">
                 <path fill="#FFFFFF" id="center-Head" d="M18.9134775,-2.67642304 L78.972703,31.9184417 C83.7540024,34.6725303 85.4165327,40.8147039 82.686068,45.6373704 C81.7749065,47.2467039 80.4405413,48.5707561 78.8303092,49.4633309 L18.7710837,82.7550181 C13.9457239,85.4297843 7.88426871,83.65254 5.23244566,78.7854318 C4.42391951,77.3014784 4,75.6356176 4,73.9423392 L4,6.05578723 C4,0.502129303 8.46351254,-4 13.9695332,-4 C15.7035909,-4 17.4076623,-3.54379155 18.9134775,-2.67642304 Z" stroke="black" stroke-width="2" fill-rule="nonzero" transform="translate(44.000000, 40.000000) scale(-1, 1) rotate(-90.000000) translate(-44.000000, -40.000000) "></path>
                 <rect fill="#FFFFFF" id="fill-64" x="13" y="62" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="64"><tspan x="16" y="73">64</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="64"><tspan x="16" y="73">64</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-61" x="34" y="62" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="61"><tspan x="37" y="73">61</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="61"><tspan x="37" y="73">61</tspan></text>
 
                 <rect fill="#FFFFFF" id="fill-63" x="56" y="62" width="18" height="15" rx="7.5"></rect>
-                <text fill="#000000" font-size="11" font-weight="normal" font-family="sans-serif" id="63"><tspan x="59" y="73">63</tspan></text>
+                <text fill="#000000" font-size="11" font-weight="normal" font-family="Inter, Avenir, Helvetica, Arial, sans-serif" id="63"><tspan x="59" y="73">63</tspan></text>
             </g>
         </g>
     </g>

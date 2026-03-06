@@ -2,9 +2,9 @@ import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ApiService } from '../../core/api/api.service';
-import { roleGuard } from '../../core/guards/auth.guard';
 import { RouteMeta } from '@analogjs/router';
+import { roleGuard } from '../../../core/guards/auth.guard';
+import { ApiService } from '../../../core/api/api.service';
 
 export const routeMeta: RouteMeta = {
   canActivate: [roleGuard(['Admin'])],
@@ -14,7 +14,7 @@ export const routeMeta: RouteMeta = {
   standalone: true,
   imports: [NgFor, RouterLink, FormsModule],
   template: `
-  <div class="p-8">
+  <div class="max-w-7xl mx-auto p-6">
 
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold">CMS Editor</h1>
@@ -23,15 +23,13 @@ export const routeMeta: RouteMeta = {
         class="border rounded px-3 py-2"
         [(ngModel)]="value"
         (change)="load()">
-        <option value="">All</option>
+        <option value="Attribute">Attributes</option>
         <option value="Type">Types</option>
         <option value="Profile">Profiles</option>
         <option value="Gate">Gates</option>
         <option value="Channel">Channels</option>
         <option value="Center">Centers</option>
         <option value="Cross">Cross</option>
-        <option value="Variable">Variables</option>
-        <option value="Arrow">Variable Arrow</option>
       </select>
     </div>
 
@@ -51,12 +49,12 @@ export const routeMeta: RouteMeta = {
           <tr *ngFor="let item of items()"
               class="border-t hover:bg-gray-50">
             <td class="p-3">{{ item.property }}</td>
-            <td class="p-3">{{ item.value }}</td>
-            <td class="p-3 font-medium">{{ item.title }}</td>
+            <td class="p-3">{{ (item.code1 && item.code2) ? item.code1 + "/" + item.code2 : (item.value || item.name) }}</td>
+            <td class="p-3 font-medium">{{ item.title || item.name }}</td>
             <td class="p-3">
               <a
-                [routerLink]="['/admin/cms', item.id]"
-                class="text-blue-600 hover:underline">
+                [routerLink]="['/cms', item.id]"
+                class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">
                 Edit
               </a>
             </td>
@@ -80,8 +78,7 @@ export default class CmsListPage {
   }
 
   load() {
-    if (!this.value) return;
-    let url = '/cms/attributes';
+    let url = 'cms/attributes';
     if (this.value) url += `?property=${this.value}`;
 
     this.api.get<any[]>(url)

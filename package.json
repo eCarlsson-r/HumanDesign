@@ -30,7 +30,7 @@
     "@ckeditor/ckeditor5-build-classic": "^41.4.2",
     "@tailwindcss/vite": "^4.1.4",
     "front-matter": "^4.0.2",
-    "html2canvas": "^1.4.1",
+    "html2canvas-pro": "^2.0.2",
     "html2pdf.js": "^0.14.0",
     "jspdf": "^4.2.0",
     "jwt-decode": "^4.0.0",

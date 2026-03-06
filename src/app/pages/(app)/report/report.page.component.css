@@ -1,0 +1,120 @@
+.level-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.active {
+  background: #333;
+  color: white;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.card {
+  margin-bottom: 16px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.description {
+  margin-top: 16px;
+}
+
+.defined {
+  color: green;
+  font-weight: bold;
+}
+
+.loading {
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+}
+
+.center-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.center-grid div {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #eee;
+}
+
+.center-grid .defined {
+  background: #4caf50;
+  color: white;
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 20mm 15mm;
+  }
+
+  body {
+    background: white;
+  }
+
+  button, .level-switch {
+    display: none !important;
+  }
+
+  body {
+    font-family: "Georgia", serif;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin-top: 20px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .page-end {
+    page-break-after: always;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  .diagram-section {
+    page-break-after: always;
+  }
+
+}

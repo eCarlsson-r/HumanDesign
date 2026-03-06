@@ -1,19 +1,24 @@
-<div id="reportContent">
-  <div class="level-tabs">
-    <button (click)="setLevel('Preview')" [class.active]="level==='Preview'">
-      Preview
-    </button>
+<div id="reportContent" class="p-6 max-w-7xl mx-auto">
+  <div class="flex justify-between items-center w-full">
+    <div class="level-tabs flex-1 justify-center">
+      <button (click)="setLevel('Preview')" [class.active]="level==='Preview'">
+        Preview
+      </button>
 
-    <button (click)="setLevel('Summary')" [class.active]="level==='Summary'">
-      Summary
-    </button>
+      <button (click)="setLevel('Summary')" [class.active]="level==='Summary'">
+        Summary
+      </button>
 
-    <button (click)="setLevel('Detail')" [class.active]="level==='Detail'">
-      Detail
-    </button>
+      <button (click)="setLevel('Detail')" [class.active]="level==='Detail'">
+        Detail
+      </button>
+    </div>
+
+    <button class="text-right bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700" (click)="exportPdf()">Download PDF</button>
   </div>
 
-  <div *ngIf="loading" class="loading">
+
+  <div *ngIf="loading()" class="loading">
     Loading report...
   </div>
 
@@ -21,55 +26,86 @@
     {{ error }}
   </div>
 
-  <hd-bodygraph *ngIf="!loading" [report]="report"></hd-bodygraph>
+  <div id="reportContent" *ngIf="report">
+    <!-- DIAGRAM -->
+    <hd-bodygraph [report]="report"></hd-bodygraph>
 
-  <section *ngIf="report">
+    <div class="section page-break">
+      <h2 class="text-2xl font-bold mb-4">{{ report.type.title }}</h2>
 
-    <h1>{{ report.type?.name }}</h1>
+      <div class="grid">
 
-    <div class="basic">
-      <p><b>Strategy:</b> {{ report.strategy?.name }}</p>
-      <p><b>Authority:</b> {{ report.authority }}</p>
-      <p><b>Profile:</b> {{ report.profile?.name }}</p>
-    </div>
+        <div>
+          <h4 class="text-lg font-semibold mt-6">Strategy</h4>
+          <p>{{ report.strategy.title }}</p>
+        </div>
 
-    <div *ngIf="level !== 'Preview'">
+        <div>
+          <h4 class="text-lg font-semibold mt-6">Authority</h4>
+          <p>{{ report.authority.title }}</p>
+        </div>
 
-      <h2>Definition</h2>
-      <p>{{ report.definition }}</p>
+        <div>
+          <h4 class="text-lg font-semibold mt-6">Signature</h4>
+          <p>{{ report.signature.title }}</p>
+        </div>
 
-      <h2>Incarnation Cross</h2>
-      <p>{{ report.cross?.description }}</p>
+        <div>
+          <h4 class="text-lg font-semibold mt-6">Not-Self Theme</h4>
+          <p>{{ report.notSelfTheme.title }}</p>
+        </div>
 
-      <h2>Centers</h2>
-      <ul>
-        <li *ngFor="let c of report.centers">
-          {{ c.name }} —
-          <span [class.defined]="c.isDefined">
-            {{ c.isDefined ? 'Defined' : 'Open' }}
-          </span>
-        </li>
-      </ul>
-
-    </div>
-
-    <div *ngIf="level === 'Detail'">
-
-      <h2>Channels</h2>
-      <div *ngFor="let ch of report.channels" class="card">
-        <h3>{{ ch.name }}</h3>
-        <p>{{ ch.description }}</p>
       </div>
 
-      <h2>Gates</h2>
-      <div *ngFor="let g of report.gates" class="card">
-        <h3>{{ g.name }}</h3>
-        <p>{{ g.description }}</p>
-      </div>
-
+      <p class="description" [innerHTML]="report.type.description"></p>
     </div>
 
-  </section>
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">{{ report.profile.title }}</h2>
+      <p [innerHTML]="report.profile.description"></p>
+    </div>
 
-  <button (click)="exportPdf()">Download PDF</button>
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">{{ report.cross.title }}</h2>
+      <p [innerHTML]="report.cross.description"></p>
+    </div>
+
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">Centers</h2>
+
+      <div class="center-grid">
+        <div *ngFor="let c of report.centers"
+            [class.defined]="c.isDefined">
+          {{ c.name }}
+        </div>
+      </div>
+    </div>
+
+    <div class="section page-break">
+      <h2 class="text-2xl font-bold mb-4">Variables</h2>
+
+      <div *ngFor="let key of objectKeys(report.variables)">
+        <h4 class="text-lg font-semibold mt-6">{{ key }} : {{ report.variables[key]?.title }}</h4>
+        <p [innerHTML]="report.variables[key]?.description"></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">Channels</h2>
+
+      <div class="card" *ngFor="let ch of report.channels">
+        <h3 class="text-xl font-bold mb-4">{{ ch.title }}</h3>
+        <p [innerHTML]="ch.description"></p>
+      </div>
+    </div>
+
+    <div class="section page-break">
+      <h2 class="text-2xl font-bold mb-4">Gates</h2>
+
+      <div class="card" *ngFor="let g of report.gates">
+        <h3 class="text-xl font-bold mb-4">Gate {{ g.gate }} : {{ g.title }}</h3>
+        <p [innerHTML]="g.description"></p>
+      </div>
+    </div>
+  </div>
 </div>

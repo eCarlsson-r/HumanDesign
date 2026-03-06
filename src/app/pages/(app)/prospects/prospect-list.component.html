@@ -1,23 +1,24 @@
-<div class="p-8">
+<div class="p-6 max-w-7xl mx-auto">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold mb-6">
+      Prospects
+    </h1>
 
-  <h1 class="text-2xl font-bold mb-6">
-    Prospects
-  </h1>
-
-  <!-- Search -->
-  <div class="flex gap-4 mb-6">
-    <input
-      type="text"
-      [(ngModel)]="search"
-      placeholder="Search name, email, phone"
-      class="border p-2 rounded-lg w-80"
-    />
-    <button
-      (click)="onSearch()"
-      class="bg-emerald-600 text-white px-4 py-2 rounded-lg"
-    >
-      Search
-    </button>
+    <!-- Search -->
+    <div class="flex gap-4 mb-6">
+      <input
+        type="text"
+        [(ngModel)]="search"
+        placeholder="Search name, email, phone"
+        class="border p-2 rounded-lg w-80"
+      />
+      <button
+        (click)="onSearch()"
+        class="bg-emerald-600 text-white px-4 py-2 rounded-lg"
+      >
+        Search
+      </button>
+    </div>
   </div>
 
   <!-- Table -->
@@ -28,35 +29,47 @@
         <tr>
           <th class="p-3 text-left">Name</th>
           <th class="p-3 text-left">Email</th>
-          <th class="p-3 text-left">Type</th>
-          <th class="p-3 text-left">Authority</th>
+          <th class="p-3 text-left">Phone</th>
           <th class="p-3 text-left">Status</th>
           <th class="p-3 text-left">Owner</th>
           <th class="p-3 text-left">Date</th>
+          <th class="p-3 text-left"></th>
         </tr>
       </thead>
 
       <tbody>
         <tr
-          *ngFor="let p of prospects"
+          *ngFor="let p of prospects()"
           class="border-t hover:bg-gray-50"
         >
           <td class="p-3 font-medium">{{ p.fullName }}</td>
           <td class="p-3">{{ p.email }}</td>
-          <td class="p-3">{{ p.type }}</td>
-          <td class="p-3">{{ p.authority }}</td>
+          <td class="p-3">{{ p.phone }}</td>
           <td class="p-3">
             <span class="px-2 py-1 rounded text-xs"
               [ngClass]="{
-                'bg-yellow-100 text-yellow-800': p.status === 'Preview',
-                'bg-blue-100 text-blue-800': p.status === 'SummaryUnlocked',
-                'bg-green-100 text-green-800': p.status === 'FullUnlocked'
+                'bg-yellow-100 text-yellow-800': p.status === 0,
+                'bg-blue-100 text-blue-800': p.status === 1,
+                'bg-green-100 text-green-800': p.status === 2
               }">
-              {{ p.status }}
+              {{ (p.status === 0 ? "Preview" : (p.status === 1 ? "Summary Unlocked" : (p.status === 2? "Full Unlocked" : p.status))) }}
             </span>
           </td>
           <td class="p-3">{{ p.ownerName }}</td>
           <td class="p-3">{{ p.createdAt | date:'short' }}</td>
+          <td class="p-3 gap-3">
+            <a
+              [routerLink]="['/prospects', p.id]"
+              class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">
+              Details
+            </a>
+
+            <a
+              [routerLink]="['/report', p.id]"
+              class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">
+              View Report
+            </a>
+          </td>
         </tr>
       </tbody>
 

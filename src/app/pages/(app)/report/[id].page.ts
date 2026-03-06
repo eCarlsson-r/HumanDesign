@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { PdfExportService } from '../../features/human-design/services/pdf-export.service';
-import { ReportApiService, HumanDesignReport } from '../../core/api/report-api.service';
-import { BodygraphComponent } from '../../features/human-design/components/bodygraph-component';
+import { ReportApiService } from '../../../core/api/report-api.service';
+import { HumanDesignReport } from '../../../features/human-design/models/report.model';
+import { PdfExportService } from '../../../features/human-design/services/pdf-export.service';
+import { BodygraphComponent } from '../../../features/human-design/components/bodygraph-component';
 
 type ReportLevel = 'Preview' | 'Summary' | 'Detail';
 
@@ -12,16 +13,17 @@ type ReportLevel = 'Preview' | 'Summary' | 'Detail';
   imports: [CommonModule, BodygraphComponent],
   standalone: true,
   templateUrl: './report.page.component.html',
-  styleUrls: ['./report.page.component.scss']
+  styleUrls: ['./report.page.component.css']
 })
 export default class ReportPageComponent implements OnInit {
 
   designId!: string;
   report?: HumanDesignReport;
+  objectKeys = Object.keys;
 
   level: ReportLevel = 'Preview';
 
-  loading = false;
+  loading = signal(false);
   error?: string;
 
   constructor(
@@ -42,7 +44,7 @@ export default class ReportPageComponent implements OnInit {
   }
 
   private loadReport() {
-    this.loading = true;
+    this.loading.set(true);
     this.error = undefined;
 
     let request$;
@@ -62,11 +64,11 @@ export default class ReportPageComponent implements OnInit {
     request$!.subscribe({
       next: r => {
         this.report = r;
-        this.loading = false;
+        this.loading.set(false);
       },
       error: err => {
         this.error = 'Failed to load report';
-        this.loading = false;
+        this.loading.set(false);
       }
     });
   }

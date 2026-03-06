@@ -8,12 +8,12 @@ import { GateListComponent } from './gate-list.component';
   standalone: true,
   imports: [CommonModule, GateListComponent],
   template: `
-    <div class="grid grid-cols-6 gap-6 mx-auto">
+    <div class="grid grid-cols-4 gap-6 mx-auto place-items-center">
       <!-- Design -->
       <hd-gate-list title="Unconscious" [gates]="report.designGates" theme="design" />
 
       <!-- Bodygraph -->
-      <div class="col-span-3 flex justify-center">
+      <div class="col-span-2 flex justify-center">
         <object class="w-full h-full" #svgObj data="/assets/bodygraph.svg" type="image/svg+xml"></object>
       </div>
 

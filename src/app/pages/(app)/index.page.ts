@@ -1,24 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { TokenService } from '../../core/api/token.service';
 import { AuthService } from '../../core/api/auth.service';
+import { RouteMeta } from '@analogjs/router';
+import { authGuard } from '../../core/guards/auth.guard';
+
+export const routeMeta: RouteMeta = {
+  canActivate: [authGuard],
+};
 
 @Component({
-  template: `
-    <div class="container">
-      <h1>Human Design Chart Generator</h1>
-    </div>
-  `
+  standalone: true,
+  selector: 'index',
+  template: ``
 })
-export default class HomePage implements OnInit {
-  constructor(private router: Router, private auth: AuthService) {}
+export default class AppIndexPage implements OnInit {
+
+  constructor(private router: Router, private token: TokenService, private auth: AuthService) {}
 
   ngOnInit() {
-    const role = this.auth.getRole();
-    console.info(this.auth);
 
-    if (role === 'Admin') this.router.navigate(['/app/admin-dashboard']);
-    else if (role === 'Leader') this.router.navigate(['/app/leader-dashboard']);
-    else if (role === 'Agent') this.router.navigate(['/app/agent-dashboard']);
-    else this.router.navigate(['/report/']);
+    if (!this.token.isLoggedIn()) {
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    const role = this.auth.getRole();
+
+    if (role === 'User')
+      this.router.navigate(['/my-chart']);
+    else
+      this.router.navigate(['/dashboard']);
+
   }
 }
