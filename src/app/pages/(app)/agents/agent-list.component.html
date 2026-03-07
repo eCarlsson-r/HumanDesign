@@ -1,8 +1,26 @@
 <div class="p-8">
 
-  <h1 class="text-2xl font-bold mb-6">
-    My Agents
-  </h1>
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold mb-6">
+      My Agents
+    </h1>
+
+    <!-- Search -->
+    <div class="flex gap-4 mb-6">
+      <input
+        type="text"
+        [(ngModel)]="search"
+        placeholder="Search name, email, phone"
+        class="border p-2 rounded-lg w-80"
+      />
+      <button
+        (click)="onSearch()"
+        class="bg-emerald-600 text-white px-4 py-2 rounded-lg"
+      >
+        Search
+      </button>
+    </div>
+  </div>
 
   <div class="bg-white rounded-xl shadow overflow-x-auto">
 
@@ -16,7 +34,7 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let a of agents"
+        <tr *ngFor="let a of agents()"
             class="border-t hover:bg-gray-50">
           <td class="p-3 font-medium">{{ a.fullName }}</td>
           <td class="p-3">{{ a.email }}</td>
@@ -26,6 +44,25 @@
 
     </table>
 
+  </div>
+
+  <!-- Pagination -->
+  <div class="flex justify-between mt-6">
+    <button
+      (click)="prev()"
+      class="px-4 py-2 bg-gray-200 rounded"
+    >
+      Previous
+    </button>
+
+    <div>Page {{ page }}</div>
+
+    <button
+      (click)="next()"
+      class="px-4 py-2 bg-gray-200 rounded"
+    >
+      Next
+    </button>
   </div>
 
 </div>

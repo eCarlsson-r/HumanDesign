@@ -1,4 +1,4 @@
-<div id="reportContent" class="p-6 max-w-7xl mx-auto">
+<div class="p-6 max-w-7xl mx-auto">
   <div class="flex justify-between items-center w-full">
     <div class="level-tabs flex-1 justify-center">
       <button (click)="setLevel('Preview')" [class.active]="level==='Preview'">
@@ -33,7 +33,7 @@
     <div class="section page-break">
       <h2 class="text-2xl font-bold mb-4">{{ report.type.title }}</h2>
 
-      <div class="grid">
+      <div class="grid grid-cols-4 gap-12">
 
         <div>
           <h4 class="text-lg font-semibold mt-6">Strategy</h4>

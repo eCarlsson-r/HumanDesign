@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler } from '@angular/common/http';
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpErrorResponse } from '@angular/common/http';
 import { TokenService } from '../api/token.service';
+import { catchError, throwError } from 'rxjs';
+import { AuthService } from '../api/auth.service';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
-  constructor(private token: TokenService) {}
+  constructor(private token: TokenService, private auth: AuthService, private router: Router) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     const publicUrls = ['/', '/login', '/register']; // Example public URLs
@@ -15,7 +18,6 @@ export class JwtInterceptor implements HttpInterceptor {
     }
 
     const token = this.token.get();
-    console.info(token);
 
     if (token) {
       req = req.clone({
@@ -25,6 +27,15 @@ export class JwtInterceptor implements HttpInterceptor {
       });
     }
 
-    return next.handle(req);
+    return next.handle(req).pipe(
+      catchError((error: HttpErrorResponse) => {
+        if (error.status === 401) {
+          this.auth.logout();
+          this.router.navigate(['/login']);
+        }
+
+        return throwError(() => error);
+      })
+    );
   }
 }

@@ -90,4 +90,14 @@ export class ProspectApiService {
       }
     );
   }
+
+  searchLocation(query:string) {
+
+    const url =
+      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+
+    return this.http.get(url);
+
+  }
+
 }

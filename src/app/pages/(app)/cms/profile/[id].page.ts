@@ -1,12 +1,11 @@
-import { Component, Inject, inject, PLATFORM_ID, signal } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink, } from '@angular/router';
 import { isPlatformBrowser, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouteMeta } from '@analogjs/router';
-import { roleGuard } from '../../../core/guards/auth.guard';
-import { ApiService } from '../../../core/api/api.service';
+import { roleGuard } from '../../../../core/guards/auth.guard';
+import { ApiService } from '../../../../core/api/api.service';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export const routeMeta: RouteMeta = {
   canActivate: [roleGuard(['Admin'])],
@@ -20,7 +19,7 @@ export const routeMeta: RouteMeta = {
 
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold">
-        Editing: {{ model().title }}
+        Editing: {{ model().name }}
       </h1>
 
       <a routerLink="/cms"
@@ -30,12 +29,27 @@ export const routeMeta: RouteMeta = {
     </div>
 
     <div class="bg-white p-6 rounded-xl shadow space-y-6">
+      <div class="grid grid-cols-6 gap-6">
+        <div>
+          <label class="block text-sm font-medium mb-2">Code 1</label>
+          <input
+            [(ngModel)]="model().code1"
+            class="w-full border rounded px-3 py-2"/>
+        </div>
 
-      <div>
-        <label class="block text-sm font-medium mb-2">Title</label>
-        <input
-          [(ngModel)]="model().title"
-          class="w-full border rounded px-3 py-2"/>
+        <div>
+          <label class="block text-sm font-medium mb-2">Code 2</label>
+          <input
+            [(ngModel)]="model().code2"
+            class="w-full border rounded px-3 py-2"/>
+        </div>
+
+        <div class="col-span-4">
+          <label class="block text-sm font-medium mb-2">Name</label>
+          <input
+            [(ngModel)]="model().name"
+            class="w-full border rounded px-3 py-2"/>
+        </div>
       </div>
 
       <div>
@@ -69,36 +83,39 @@ export const routeMeta: RouteMeta = {
   </div>
   `
 })
-export default class CmsEditPage {
+export default class CmsProfileEditPage {
   public Editor: any;
+  public isBrowser = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private route: ActivatedRoute,
     private api: ApiService
   ) {
-    // Only load the editor if it's running in the browser
-    if (isPlatformBrowser(this.platformId)) {
-      import('@ckeditor/ckeditor5-build-classic').then(ClassicEditor => {
-        this.Editor = ClassicEditor.default;
-      });
-    }
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   model = signal<any | null>(null);
   saved = signal(false);
 
   ngOnInit() {
+    // Only load the editor if it's running in the browser
+    if (this.isBrowser) {
+      import('@ckeditor/ckeditor5-build-classic').then(ClassicEditor => {
+        this.Editor = ClassicEditor.default;
+      });
+    }
+
     const id = this.route.snapshot.paramMap.get('id');
 
-    this.api.get(`cms/${id}`)
+    this.api.get(`cms/profile/${id}`)
       .subscribe(res => this.model.set(res));
   }
 
   save() {
     this.saved.set(false);
 
-    this.api.put(`cms/${this.model().id}`, this.model())
+    this.api.put(`cms/profile/${this.model().id}`, this.model())
       .subscribe(() => {
         this.saved.set(true);
       });

@@ -1,7 +1,5 @@
 # ✨ Human Design Portal
 
-![Human Design Hero](./assets/hero.png)
-
 [![Angular](https://img.shields.io/badge/Angular-21.0-DD0031?logo=angular)](https://angular.io/)
 [![AnalogJS](https://img.shields.io/badge/AnalogJS-2.3.0-blue?logo=analog)](https://analogjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
@@ -61,8 +59,4 @@ A premium, high-performance web application for exploring and generating Human D
 
 ---
 
-<p align="center">
-  <img src="./assets/logo.png" width="100" height="100" alt="Logo">
-  <br>
-  Designed for self-awareness. Engineered for performance.
-</p>
+> Designed for self-awareness. Engineered for performance.
