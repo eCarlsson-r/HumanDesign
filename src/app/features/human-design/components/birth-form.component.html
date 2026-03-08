@@ -9,24 +9,26 @@
 
   <input type="time" formControlName="BirthTime" class="border p-3 rounded-lg w-full" />
 
-  <input
-    type="text"
-    formControlName="BirthLocation"
-    (input)="searchLocation($event)"
-    placeholder="Search location"
-    class="border p-3 rounded-lg w-full"
-  />
+  <div>
+    <input
+      type="text"
+      formControlName="BirthLocation"
+      (input)="searchLocation($event)"
+      placeholder="Search location"
+      class="border p-3 rounded-lg w-full"
+    />
 
-  <ul *ngIf="locations.length">
+    <ul *ngIf="locations.length" class="group-hover:block bg-white border border-gray-200 rounded shadow-md w-full z-10">
 
-    <li
-      *ngFor="let loc of locations"
-      (click)="selectLocation(loc)"
-    >
-      {{ loc.display_name }}
-    </li>
+      <li
+        *ngFor="let loc of locations" (click)="selectLocation(loc)"
+        class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+      >
+        {{ loc.display_name }}
+      </li>
 
-  </ul>
+    </ul>
+  </div>
 
   <button type="submit" [disabled]="loading" class="bg-emerald-600 text-white py-3 rounded-xl font-semibold hover:bg-emerald-700">
     {{ loading ? 'Generating...' : 'Generate Preview' }}

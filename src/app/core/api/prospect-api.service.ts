@@ -71,7 +71,7 @@ export class ProspectApiService {
 
   createProspect(req: CreateProspectRequest, referralCode: string | null): Observable<{prospectId: string | null, report: HumanDesignReport}> {
     return this.http.post<{prospectId: string | null, report: HumanDesignReport}>(
-      referralCode ? this.baseUrl+`?r=${referralCode}` : this.baseUrl, req,
+      referralCode ? this.baseUrl+`?referrer=${referralCode}` : this.baseUrl, req,
       {
         headers: {
           authorization: this.token.get() ?? ''

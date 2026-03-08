@@ -6,6 +6,7 @@ import { jwtDecode } from 'jwt-decode';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private api = '/api/auth';
+  private logoutTimer: any;
 
   constructor(
     private http: HttpClient,
@@ -29,7 +30,27 @@ export class AuthService {
   }
 
   logout() {
+    this.clearLogoutTimer();
     this.token.clear();
+  }
+
+  scheduleLogout(token: string) {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    const expiry = payload.exp * 1000;
+    const timeout = expiry - Date.now();
+
+    this.clearLogoutTimer();
+
+    this.logoutTimer = setTimeout(() => {
+      this.logout()
+    }, timeout);
+  }
+
+  clearLogoutTimer() {
+    if (this.logoutTimer) {
+      clearTimeout(this.logoutTimer);
+      this.logoutTimer = null;
+    }
   }
 
   getRole(): string | null {
@@ -45,6 +66,14 @@ export class AuthService {
     if (!t) return null;
 
     const decoded: any = jwtDecode(t);
-    return decoded["nameid"];
+    return decoded["nameid"] || decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
+  }
+
+  getReferralCode(): string | null {
+    const t = this.token.get();
+    if (!t) return null;
+
+    const decoded: any = jwtDecode(t);
+    return decoded["referral_code"];
   }
 }

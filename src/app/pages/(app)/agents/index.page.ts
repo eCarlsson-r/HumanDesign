@@ -2,11 +2,12 @@ import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { AgentService } from '../../../core/api/agent-api.service';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'crm-agent-list',
   templateUrl: './agent-list.component.html',
-  imports: [CommonModule, FormsModule, DatePipe]
+  imports: [CommonModule, FormsModule, DatePipe, RouterLink]
 })
 export default class AgentListComponent implements OnInit {
 

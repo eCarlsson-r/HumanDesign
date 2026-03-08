@@ -16,10 +16,15 @@ export const authGuard: CanActivateFn = () => {
 
 export const guestGuard: CanActivateFn = () => {
   const token = inject(TokenService);
+  const auth = inject(AuthService);
   const router = inject(Router);
 
   if (token.isLoggedIn()) {
-    router.navigate(['/dashboard']);
+    const role = auth.getRole();
+    console.info("Role : ", role, auth.getUserId());
+
+    if (role === 'User') router.navigate(['/report', auth.getUserId()]);
+    else router.navigate(['/dashboard']);
     return false;
   }
   return true;
@@ -31,7 +36,10 @@ export const roleGuard = (allowedRoles: string[]):CanActivateFn => {
     const router = inject(Router);
 
     if (!allowedRoles.includes(auth.getRole() || "")) {
-      router.navigate(['/dashboard']);
+      const role = auth.getRole();
+
+      if (role === 'User') router.navigate(['/report', auth.getUserId()]);
+      else router.navigate(['/dashboard']);
       return false;
     }
 

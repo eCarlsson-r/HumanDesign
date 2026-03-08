@@ -100,7 +100,7 @@ export default class CmsEditPage {
   save() {
     this.saved.set(false);
 
-    this.api.put(`cms/gate/${this.model().id}`, this.model())
+    this.api.put(`cms/gate/${this.model().number}`, this.model())
       .subscribe(() => {
         this.saved.set(true);
       });

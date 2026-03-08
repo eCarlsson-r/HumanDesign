@@ -32,32 +32,32 @@
 
     <div class="section page-break">
       <h2 class="text-2xl font-bold mb-4">{{ report.type.title }}</h2>
+      <p [innerHTML]="report.type.description"></p>
+    </div>
 
-      <div class="grid grid-cols-4 gap-12">
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">{{ report.strategy.title }}</h2>
+      <p [innerHTML]="report.strategy.description"></p>
+    </div>
 
-        <div>
-          <h4 class="text-lg font-semibold mt-6">Strategy</h4>
-          <p>{{ report.strategy.title }}</p>
-        </div>
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">{{ report.authority.title }}</h2>
+      <p [innerHTML]="report.authority.description"></p>
+    </div>
 
-        <div>
-          <h4 class="text-lg font-semibold mt-6">Authority</h4>
-          <p>{{ report.authority.title }}</p>
-        </div>
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">{{ report.signature.title }}</h2>
+      <p [innerHTML]="report.signature.description"></p>
+    </div>
 
-        <div>
-          <h4 class="text-lg font-semibold mt-6">Signature</h4>
-          <p>{{ report.signature.title }}</p>
-        </div>
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">{{ report.notSelfTheme.title }}</h2>
+      <p [innerHTML]="report.notSelfTheme.description"></p>
+    </div>
 
-        <div>
-          <h4 class="text-lg font-semibold mt-6">Not-Self Theme</h4>
-          <p>{{ report.notSelfTheme.title }}</p>
-        </div>
-
-      </div>
-
-      <p class="description" [innerHTML]="report.type.description"></p>
+    <div class="section">
+      <h2 class="text-2xl font-bold mb-4">{{ report.definition.title }}</h2>
+      <p [innerHTML]="report.definition.description"></p>
     </div>
 
     <div class="section">
@@ -81,7 +81,7 @@
       </div>
     </div>
 
-    <div class="section page-break">
+    <div class="section">
       <h2 class="text-2xl font-bold mb-4">Variables</h2>
 
       <div *ngFor="let key of objectKeys(report.variables)">

@@ -8,28 +8,28 @@
                 <tspan id="digestion-color">H</tspan>
                 <tspan id="digestion-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
             </text>
-            <g id="digestion-arrow" transform="translate(50,75)" width="27" height="20" fill="#d9534f" stroke="#d9534f">
+            <g id="digestion-arrow" x="50" y="75" width="27" height="20" fill="#d9534f" stroke="#d9534f">
                 <path d="M17.15.585l-2.398 2.463a.43.43 0 0 0 .001.604l4.063 4.144H1.243a.43.43 0 0 0-.432.432v3.455a.43.43 0 0 0 .432.432h17.573l-4.063 4.144a.43.43 0 0 0-.001.603l2.398 2.463a.43.43 0 0 0 .618 0l8.829-9.068a.43.43 0 0 0 0-.602L17.769.585a.43.43 0 0 0-.618 0z"></path>
             </g>
             <text x="90" y ="140" fill="#d9534f" font-size="24" font-family="Inter, Avenir, Helvetica, Arial, sans-serif">
                 <tspan id="environment-color">H</tspan>
                 <tspan id="environment-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
             </text>
-            <g id="environment-arrow" transform="translate(50,125)" width="27" height="20" fill="#d9534f" stroke="#d9534f">
+            <g id="environment-arrow" x="50" y="125" width="27" height="20" fill="#d9534f" stroke="#d9534f">
                 <path d="M17.15.585l-2.398 2.463a.43.43 0 0 0 .001.604l4.063 4.144H1.243a.43.43 0 0 0-.432.432v3.455a.43.43 0 0 0 .432.432h17.573l-4.063 4.144a.43.43 0 0 0-.001.603l2.398 2.463a.43.43 0 0 0 .618 0l8.829-9.068a.43.43 0 0 0 0-.602L17.769.585a.43.43 0 0 0-.618 0z"></path>
             </g>
             <text x="360" y ="90" fill="#495057" font-size="24" font-family="Inter, Avenir, Helvetica, Arial, sans-serif">
                 <tspan id="awareness-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
                 <tspan id="awareness-color">H</tspan>
             </text>
-            <g id="awareness-arrow" transform="translate(410,75)" width="27" height="20" fill="#495057" stroke="#495057">
+            <g id="awareness-arrow" x="410" y="75" width="27" height="20" fill="#495057" stroke="#495057">
                 <path d="M17.15.585l-2.398 2.463a.43.43 0 0 0 .001.604l4.063 4.144H1.243a.43.43 0 0 0-.432.432v3.455a.43.43 0 0 0 .432.432h17.573l-4.063 4.144a.43.43 0 0 0-.001.603l2.398 2.463a.43.43 0 0 0 .618 0l8.829-9.068a.43.43 0 0 0 0-.602L17.769.585a.43.43 0 0 0-.618 0z"></path>
             </g>
             <text x="360" y ="140" fill="#495057" font-size="24" font-family="Inter, Avenir, Helvetica, Arial, sans-serif">
                 <tspan id="perspective-tone" baseline-shift="sub" font-size="0.7em">2</tspan>
                 <tspan id="perspective-color">H</tspan>
             </text>
-            <g id="perspective-arrow" transform="translate(410,125)" width="27" height="20" fill="#495057" stroke="#495057">
+            <g id="perspective-arrow" x="410" y="125" width="27" height="20" fill="#495057" stroke="#495057">
                 <path d="M17.15.585l-2.398 2.463a.43.43 0 0 0 .001.604l4.063 4.144H1.243a.43.43 0 0 0-.432.432v3.455a.43.43 0 0 0 .432.432h17.573l-4.063 4.144a.43.43 0 0 0-.001.603l2.398 2.463a.43.43 0 0 0 .618 0l8.829-9.068a.43.43 0 0 0 0-.602L17.769.585a.43.43 0 0 0-.618 0z"></path>
             </g>
         </g>

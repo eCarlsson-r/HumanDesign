@@ -2,45 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AgentService } from '../../../core/api/agent-api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [ReactiveFormsModule],
-  template: `
-  <div class="container">
-
-    <h2>Edit Agent</h2>
-
-    <form [formGroup]="form" (ngSubmit)="save()">
-
-      <label>Full Name</label>
-      <input formControlName="fullName"/>
-
-      <label>Email</label>
-      <input formControlName="email" readonly/>
-
-      <label>Role</label>
-      <select formControlName="role">
-        <option value="Agent">Agent</option>
-        <option value="Leader">Leader</option>
-      </select>
-
-      <label>Parent Leader</label>
-
-      <select formControlName="parentId">
-        <option value="">None</option>
-
-        <option *ngFor="let l of leaders" [value]="l.id">
-          {{ l.fullName }}
-        </option>
-
-      </select>
-
-      <button type="submit">Save</button>
-
-    </form>
-
-  </div>
-  `
+  imports: [ReactiveFormsModule, CommonModule],
+  templateUrl: './agent-detail.component.html'
 })
 export default class AgentEditPage implements OnInit {
 

@@ -2,9 +2,11 @@
   <!-- Navbar -->
   <header class="border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a routerLink="/dashboard" class="text-xl font-bold text-emerald-600">
+      <a *ngIf="role!=='User'" routerLink="/dashboard" class="text-xl font-bold text-emerald-600">
         <img class="logo" src="/assets/logo-text.png" />
       </a>
+
+      <img *ngIf="role==='User'" class="logo" src="/assets/logo-text.png" />
 
       <nav class="space-x-6 text-sm font-medium">
         <a *ngIf="role==='Admin'"

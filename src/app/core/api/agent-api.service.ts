@@ -33,7 +33,13 @@ export class AgentService {
   }
 
   getLeaders() {
-    return this.http.get(`${this.baseUrl}/leaders`);
+    return this.http.get(`${this.baseUrl}/leaders`,
+      {
+        headers: {
+          authorization: this.token.get() ?? ''
+        }
+      }
+    );
   }
 
   updateAgent(id: string, data: any) {

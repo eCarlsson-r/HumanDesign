@@ -14,7 +14,7 @@ export const routeMeta: RouteMeta = {
   template: `
   <div class="flex min-h-screen h-full items-center justify-center">
     <div class="w-full max-w-md bg-white p-8 rounded-xl shadow grid gap-6">
-      <h2>Login</h2>
+      <h2 class="text-2xl font-bold mb-4">Login</h2>
 
       <input [(ngModel)]="email" placeholder="Email" class="border p-3 rounded-lg w-full" />
       <input [(ngModel)]="password" type="password" placeholder="Password" class="border p-3 rounded-lg w-full" />
@@ -38,6 +38,7 @@ export default class LoginComponent {
     this.auth.login(this.email, this.password).subscribe({
       next: (res) => {
         this.auth.saveToken(res.token);
+        this.auth.scheduleLogout(res.token);
         this.router.navigate(['/']);
       },
       error: () => alert("Invalid credentials")

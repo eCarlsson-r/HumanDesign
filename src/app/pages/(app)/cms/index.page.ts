@@ -22,7 +22,7 @@ export const routeMeta: RouteMeta = {
       <select
         class="border rounded px-3 py-2"
         [(ngModel)]="value"
-        (change)="load()">
+        (change)="select()">
         <option value="">Attributes</option>
         <option value="Type">Types</option>
         <option value="Profile">Profiles</option>
@@ -132,13 +132,25 @@ export default class CmsListPage {
     if (this.value) url += `?property=${this.value}&page=${this.page}&pageSize=${this.pageSize}`;
     else url += `?page=${this.page}&pageSize=${this.pageSize}`;
 
-    this.api.get<any[]>(url)
-      .subscribe(res => this.items.set(res));
+    this.api.get<{items: any[], total: number}>(url)
+      .subscribe(res => {
+        this.items.set(res.items);
+        this.total = res.total;
+      });
+  }
+
+  select() {
+    this.page = 1;
+    this.total = 0;
+    this.load();
   }
 
   next() {
-    this.page++;
-    this.load();
+    console.info(this.total, this.pageSize, this.total / this.pageSize, this.page +1)
+    if (this.total / this.pageSize <= this.page +1) {
+      this.page++;
+      this.load();
+    }
   }
 
   prev() {

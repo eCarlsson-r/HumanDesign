@@ -69,8 +69,12 @@ export class DiagramEngineService {
       const name = key.toLowerCase();
       const arrowEl = svg.getElementById(`${name}-arrow`);
       if (!arrowEl) return;
+      const x = parseInt(arrowEl.getAttribute("x") || '0');
+      const y = parseInt(arrowEl.getAttribute("y") || '0');
+      const width = parseInt(arrowEl.getAttribute("width") || '0');
+      const height = parseInt(arrowEl.getAttribute("height") || '0');
 
-      if (arrow.isLeft) arrowEl.setAttribute('transform', 'rotate(180deg)');
+      if (arrow.isLeft) arrowEl.setAttribute('transform', `rotate(180 ${(x + width) / 2} ${(y + height) / 2})`);
 
       svg.getElementById(`${name}-color`)!.textContent = arrow.color;
       svg.getElementById(`${name}-tone`)!.textContent = arrow.tone;

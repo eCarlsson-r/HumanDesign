@@ -19,7 +19,15 @@ export class TokenService {
     if (isPlatformBrowser(this.platformId)) localStorage.removeItem(this.key);
   }
 
+  isTokenExpired(token: string): boolean {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    const expiry = payload.exp * 1000;
+    return Date.now() > expiry;
+  }
+
   isLoggedIn(): boolean {
-    return !!this.get();
+    const token = this.get();
+    if (!token || this.isTokenExpired(token)) return false;
+    return true;
   }
 }

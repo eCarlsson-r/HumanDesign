@@ -1,7 +1,7 @@
-<div class="p-8">
+<div class="p-6 max-w-7xl mx-auto">
 
   <div class="flex justify-between items-center mb-6">
-    <h1 class="text-2xl font-bold mb-6">
+    <h1 class="text-3xl font-bold mb-6">
       My Agents
     </h1>
 
@@ -30,6 +30,7 @@
           <th class="p-3 text-left">Name</th>
           <th class="p-3 text-left">Email</th>
           <th class="p-3 text-left">Joined</th>
+          <th class="p-3 text-left"></th>
         </tr>
       </thead>
 
@@ -39,6 +40,9 @@
           <td class="p-3 font-medium">{{ a.fullName }}</td>
           <td class="p-3">{{ a.email }}</td>
           <td class="p-3">{{ a.createdAt | date:'short' }}</td>
+          <td class="p-3">
+            <a [routerLink]="['/agents', a.id]" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">Edit</a>
+          </td>
         </tr>
       </tbody>
 

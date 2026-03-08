@@ -74,7 +74,8 @@ export default class ReportPageComponent implements OnInit {
   }
 
   exportPdf() {
-    const name = `HumanDesign_${this.designId}_${this.level}.pdf`;
-    this.pdf.export('reportContent', name);
+    window.print();
+    /*const name = `HumanDesign_${this.designId}_${this.level}.pdf`;
+    this.pdf.export('reportContent', name);*/
   }
 }

@@ -35,7 +35,7 @@ export default class HomeComponent implements OnInit {
     private router: Router,
     private cdr: ChangeDetectorRef
   ) {
-    this.referralCode = this.route.snapshot.queryParamMap.get('r');
+    this.referralCode = this.route.snapshot.queryParamMap.get('ref');
   }
 
   ngOnInit() {

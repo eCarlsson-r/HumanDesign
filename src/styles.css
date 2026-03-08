@@ -61,3 +61,72 @@ button:focus-visible {
 .diagram svg {
   width: 100%;
 }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important; /* Chrome, Safari, Edge */
+    print-color-adjust: exact !important;         /* Firefox */
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm 0;
+  }
+
+  body {
+    background: white;
+  }
+
+  header, footer, button, .level-switch {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 24pt;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 16pt;
+    margin :0;
+  }
+
+  h6 {
+    font-size: 11pt;
+    margin: 0;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .page-end {
+    page-break-after: always;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  .diagram-section {
+    page-break-after: always;
+  }
+
+  div, .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+}

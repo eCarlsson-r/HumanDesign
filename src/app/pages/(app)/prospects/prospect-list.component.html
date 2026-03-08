@@ -55,9 +55,9 @@
               {{ (p.status === 0 ? "Preview" : (p.status === 1 ? "Summary Unlocked" : (p.status === 2? "Full Unlocked" : p.status))) }}
             </span>
           </td>
-          <td class="p-3">{{ p.ownerName }}</td>
+          <td class="p-3">{{ p.owner }}</td>
           <td class="p-3">{{ p.createdAt | date:'short' }}</td>
-          <td class="p-3 gap-3">
+          <td class="p-3 flex justify-center space-x-3">
             <a
               [routerLink]="['/prospects', p.id]"
               class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">

@@ -26,9 +26,10 @@ export default class AppIndexPage implements OnInit {
     }
 
     const role = this.auth.getRole();
+    console.info("Role : ", role);
 
     if (role === 'User')
-      this.router.navigate(['/my-chart']);
+      this.router.navigate(['/report/', this.auth.getUserId()]);
     else
       this.router.navigate(['/dashboard']);
 

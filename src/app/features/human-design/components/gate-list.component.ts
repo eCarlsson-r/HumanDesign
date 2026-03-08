@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="rounded-xl p-4 text-white" [ngClass]="themeClass">
 
-      <h2 class="text-xl font-bold mb-4 text-md text-center">{{ theme.toUpperCase() }}</h2>
-      <h2 class="text-lg font-bold mb-4 text-sm text-center">{{ title.toUpperCase() }}</h2>
+      <h3 class="text-xl font-bold mb-4 text-center">{{ theme.toUpperCase() }}</h3>
+      <h6 class="text-lg font-bold mb-4 text-center">{{ title.toUpperCase() }}</h6>
 
       <div *ngIf="theme == 'design'">
         <div *ngFor="let gate of gates"
