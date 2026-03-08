@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReportApiService } from '../../../core/api/report-api.service';
 import { HumanDesignReport } from '../../../features/human-design/models/report.model';
-import { PdfExportService } from '../../../features/human-design/services/pdf-export.service';
 import { BodygraphComponent } from '../../../features/human-design/components/bodygraph-component';
+import { AuthService } from '../../../core/api/auth.service';
 
 type ReportLevel = 'Preview' | 'Summary' | 'Detail';
 
@@ -22,13 +22,14 @@ export default class ReportPageComponent implements OnInit {
   objectKeys = Object.keys;
 
   level: ReportLevel = 'Preview';
+  status = this.auth.getProspectStatus();
 
   loading = signal(false);
   error?: string;
 
   constructor(
     private route: ActivatedRoute,
-    private pdf: PdfExportService,
+    private auth: AuthService,
     private api: ReportApiService
   ) {}
 

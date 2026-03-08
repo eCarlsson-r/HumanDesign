@@ -1,15 +1,15 @@
 <div class="p-6 max-w-7xl mx-auto">
   <div class="flex justify-between items-center w-full">
-    <div class="level-tabs flex-1 justify-center">
+    <div *ngIf="status != 'Preview'" class="level-tabs flex-1 justify-center">
       <button (click)="setLevel('Preview')" [class.active]="level==='Preview'">
         Preview
       </button>
 
-      <button (click)="setLevel('Summary')" [class.active]="level==='Summary'">
+      <button *ngIf="status == 'SummaryUnlocked' || status == 'FullUnlocked'" (click)="setLevel('Summary')" [class.active]="level==='Summary'">
         Summary
       </button>
 
-      <button (click)="setLevel('Detail')" [class.active]="level==='Detail'">
+      <button *ngIf="status == 'FullUnlocked'" (click)="setLevel('Detail')" [class.active]="level==='Detail'">
         Detail
       </button>
     </div>

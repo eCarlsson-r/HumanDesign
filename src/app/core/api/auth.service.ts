@@ -76,4 +76,12 @@ export class AuthService {
     const decoded: any = jwtDecode(t);
     return decoded["referral_code"];
   }
+
+  getProspectStatus() {
+    const t = this.token.get();
+    if (!t) return null;
+
+    const decoded: any = jwtDecode(t);
+    return decoded["prospect_status"];
+  }
 }
