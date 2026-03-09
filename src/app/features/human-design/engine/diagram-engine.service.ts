@@ -75,6 +75,7 @@ export class DiagramEngineService {
       const height = parseInt(arrowEl.getAttribute("height") || '0');
 
       if (arrow.isLeft) arrowEl.setAttribute('transform', `rotate(180 ${(x + width) / 2} ${(y + height) / 2})`);
+      else arrowEl.setAttribute('transform', `translate(${x}, ${y})`);
 
       svg.getElementById(`${name}-color`)!.textContent = arrow.color;
       svg.getElementById(`${name}-tone`)!.textContent = arrow.tone;
