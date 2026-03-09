@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     mainFields: ['module'],
   },
   plugins: [
-    analog({ adapter: vercel() }),
+    analog(),
     tailwindcss()
   ],
   test: {
