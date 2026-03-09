@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event);
 
   // TODO: call C# backend
-  const response = await $fetch(`${import.meta.env['VITE_API_URL']}/auth/login`, {
+  const response = await $fetch(`${process.env['VITE_API_URL']}/auth/login`, {
     method: 'POST',
     body
   });
